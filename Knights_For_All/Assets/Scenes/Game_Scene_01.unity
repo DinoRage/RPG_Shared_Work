@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442540783}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -76.26953, y: 0, z: -834.27734}
+  m_LocalPosition: {x: 0.29296875, y: 0, z: -2.6367188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1595555702}
@@ -317,15 +317,15 @@ MonoBehaviour:
     SnowBlendFactor: 2.75
     SnowBrightness: 1
   VegetationStudioCameraList:
-  - SelectedCamera: {fileID: 0}
-    VegetationStudioCameraType: 1
-    RenderDirectToCamera: 0
+  - SelectedCamera: {fileID: 1668506452}
+    VegetationStudioCameraType: 0
+    RenderDirectToCamera: 1
     RenderBillboardsOnly: 0
     CameraCullingMode: 0
     VegetationSystemPro: {fileID: 474367810}
-    WindSampler: {fileID: 940440357}
-  - SelectedCamera: {fileID: 1668506452}
-    VegetationStudioCameraType: 0
+    WindSampler: {fileID: 845924440}
+  - SelectedCamera: {fileID: 0}
+    VegetationStudioCameraType: 1
     RenderDirectToCamera: 0
     RenderBillboardsOnly: 0
     CameraCullingMode: 0
@@ -839,8 +839,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845924440}
-  m_LocalRotation: {x: -0.26977643, y: 0.10401879, z: -0.029320575, w: -0.95683914}
-  m_LocalPosition: {x: -74.741844, y: 11.702815, z: -980.415}
+  m_LocalRotation: {x: -0.039520722, y: -0.9484313, z: 0.28592518, w: -0.13100745}
+  m_LocalPosition: {x: 0.3843956, y: 63.91192, z: -2.6968765}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474367811}
@@ -875,7 +875,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 0.14584954, g: 0.14239943, b: 0.2264151, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 1.95
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
