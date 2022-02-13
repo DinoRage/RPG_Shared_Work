@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Blink/Tools/RPGBuilder/Scenes/MainMenu.unity
+    guid: 633760486851e0444bb3c9f6ad7e1fbc
+  - enabled: 1
+    path: Assets/Blink/Tools/RPGBuilder/Scenes/RPGBuilderDemo.unity
+    guid: f89f8fdf4492100489d95509b6a7a633
   m_configObjects: {}
