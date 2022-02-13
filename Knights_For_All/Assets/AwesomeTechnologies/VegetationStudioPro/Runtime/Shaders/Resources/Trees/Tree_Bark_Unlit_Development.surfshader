@@ -1,0 +1,9 @@
+﻿BEGIN_OPTIONS
+   ShaderName "AwesomeTechnologies/Development/Trees/Tree_Bark_Unlit"       
+   Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" }
+   Workflow "Unlit"           
+END_OPTIONS
+
+BEGIN_SUBSHADERS
+  "Tree_Bark_Metalic_Development.surfshader"
+END_SUBSHADERS

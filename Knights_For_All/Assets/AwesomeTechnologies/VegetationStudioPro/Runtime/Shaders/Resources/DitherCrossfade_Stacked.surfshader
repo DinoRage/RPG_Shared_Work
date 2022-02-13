@@ -1,0 +1,21 @@
+﻿
+BEGIN_DEFINES	
+    #pragma multi_compile_local _ LOD_FADE_CROSSFADE
+END_DEFINES
+
+BEGIN_SUBSHADERS
+"DitherCrossfade_Base_Stacked.surfshader"  
+END_SUBSHADERS
+
+BEGIN_CODE
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{
+        //#if LOD_FADE_CROSSFADE
+            float4 screenPosNorm = d.screenPos / d.screenPos.w;
+            screenPosNorm.z = ( UNITY_NEAR_CLIP_VALUE >= 0 ) ? screenPosNorm.z : screenPosNorm.z * 0.5 + 0.5;
+            float2 clipScreen = screenPosNorm.xy * _ScreenParams.xy;               
+            ApplyDitherCrossFadeVSP(clipScreen,unity_LODFade.x);
+        //#endif      
+	}
+END_CODE
+

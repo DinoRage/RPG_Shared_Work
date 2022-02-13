@@ -1,0 +1,10 @@
+﻿BEGIN_OPTIONS
+   ShaderName "AwesomeTechnologies/Development/Billboards/BillboardsMetallic"     
+   Tags { "RenderType"="TransparentCutout" "Queue"="Alphatest" "DisableBatching"="True" "IgnoreProjector"="True"}
+   Workflow "Metallic"     
+END_OPTIONS
+
+BEGIN_SUBSHADERS
+  "VSP_BillboardShaderSpecularDevelopment.surfshader"
+END_SUBSHADERS
+

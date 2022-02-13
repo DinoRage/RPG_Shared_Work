@@ -1,0 +1,29 @@
+﻿BEGIN_CODE
+
+        // touch react
+        #ifdef TOUCH_BEND_ON
+        sampler2D	_TouchReact_Buffer;
+        float4		_TouchReact_Pos;		
+        #endif
+        
+        
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{
+	    #ifdef TOUCH_BEND_ON
+            float3 pos = d.worldSpacePosition;   	
+            	         	        	
+            float2 tbPos = saturate((float2(pos.x,-pos.z) - _TouchReact_Pos.xz)/_TouchReact_Pos.w);
+            float2 touchBend  = tex2Dlod(_TouchReact_Buffer, float4(tbPos,0,0));                        	                     
+            touchBend.y *= 1.0 - length(tbPos - 0.5) * 2; // clip texture "clamp" bugs
+                                   
+            if(touchBend.y > 0.01)
+            {                      
+                if ((touchBend.x * 10000) < pos.y)
+                {
+                    clip (-1);
+                }
+            }
+        #endif 
+	}
+END_CODE
+

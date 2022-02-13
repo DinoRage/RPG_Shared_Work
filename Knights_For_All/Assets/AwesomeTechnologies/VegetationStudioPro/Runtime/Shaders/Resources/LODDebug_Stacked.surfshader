@@ -1,0 +1,12 @@
+﻿BEGIN_CODE
+
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{
+	    if (unity_LODFade.w < 0.5) o.Albedo = float3 (0,1,0);                 
+        if (unity_LODFade.w > 0.5) o.Albedo = float3 (1,0,0);
+        if (unity_LODFade.w > 1.5) o.Albedo = float3 (0,0,1);    
+        if (unity_LODFade.w > 2.5) o.Albedo = float3 (0,1,1);           
+	}
+	
+END_CODE
+

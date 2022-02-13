@@ -1,0 +1,503 @@
+﻿BEGIN_OPTIONS
+   ShaderName "AwesomeTechnologies/Development/Billboards/BetterShaders_GroupBillboards"     
+   Tags { "RenderType"="TransparentCutout" "Queue"="Alphatest" "DisableBatching"="True" "IgnoreProjector"="True"}
+   Workflow "Specular"  // Metallic, Specular, or Unlit
+   
+END_OPTIONS
+
+BEGIN_SUBSHADERS
+"../DitherCrossfade_Base_Stacked.surfshader"  
+END_SUBSHADERS
+
+
+BEGIN_PROPERTIES
+	    _Color ("Color", Color) = (1,1,1,1)
+		_MainTex ("Albedo (RGB)", 2D) = "white" {}
+		_Bump ("Bump", 2D) = "white" {}
+		_HueVariation ("Hue variation", Color) = (1,1,1,.5)
+		_Cutoff("Cutoff" , Range(0,1)) = .5
+		_NormalStrength("Normal Strength" , Range(0,5)) = 1
+		_Brightness("Brightness" , Range(0,5)) = 1
+		_Smoothness("Smoothness" , Range(0,1)) = 0.2
+	    _Occlusion("Occlusion" , Range(0,1)) = 1
+		_Metallic("Metallic" , Range(0,1)) = 0.5
+		_MipmapBias("Mipmap bias" , Range(-3,0)) = -2
+		_CullDistance("Near cull distance",Float) = 0
+		_FarCullDistance("Far cull distance",Float) = 0
+ 		_FadeDistance("Fade distance",Float) = 0
+ 		_NearFadeDistance("Near fade distance",Float) = 10
+ 		_UseFade("Use fade", Int) = 0
+ 		_ShadowOffset("Shadow offset",Float) = 2
+ 		_DepthBoundsSize("DepthBoundSize",Float) = 0
+		_InRow("Frames in row", Int) = 8
+		_InCol("Frames in column", Int) = 8
+		_CameraPosition("Camera position",Vector) = (0,0,0,0)
+		_SnowAmount("Snow area", Range(0,1)) = 0.5
+		_SnowColor("Snow Color", Color) = (1,1,1,1)
+		_SnowBlendFactor("Snow Blend Factor", Range(0,10)) = 3
+		_SnowBrightness("Snow Brightness" , Range(0,5)) = 1
+		[KeywordEnum(ON, OFF)] AT_HUE_VARIATION ("Use SpeedTree HUE variation", Float) = 0
+		_BillboardWindSpeed("Billboard wind speed" , Range(0,5)) = 1	
+		_LODDebugColor ("LOD Debug color", Color) = (1,1,1,1)			
+				
+END_PROPERTIES
+
+BEGIN_DEFINES
+	#pragma multi_compile_local AT_HUE_VARIATION_ON AT_HUE_VARIATION_OFF
+	#pragma multi_compile_local _ USE_SNOW
+	#pragma multi_compile_local _ USE_HDWIND			
+    #define FLT_EPSILON 1.192092896e-07     
+    #pragma target 5.0	    
+END_DEFINES
+
+BEGIN_CODE
+
+sampler2D _MainTex;
+sampler2D _Bump;
+fixed4 _Color;
+float _YRotation;
+float _XTurnFix;
+float _CullDistance;
+float _FarCullDistance;
+float _Brightness;
+float _MipmapBias;
+int _InRow;
+int _InCol;
+int _CameraType;
+int _UseFade;
+float4 _CameraPosition;
+float4 gVSSunDirection;
+float _Cutoff;
+float _FadeDistance;
+
+float _NearFadeDistance;
+
+float _BillboardWindSpeed;
+
+float _Smoothness;
+float _Metallic;
+float _Specular;
+float _Occlusion;
+float _NormalStrength;
+
+float _ShadowOffset;
+float _DepthBoundsSize;
+
+#ifdef USE_SNOW
+half _SnowAmount;
+fixed4 _SnowColor;
+half _SnowBlendFactor;
+float _SnowBrightness;
+#endif
+
+#ifdef AT_HUE_VARIATION_ON
+half4 _HueVariation;
+#endif
+
+fixed4 _LODDebugColor;
+
+sampler2D WIND_SETTINGS_TexNoise;
+sampler2D WIND_SETTINGS_TexGust;
+
+float _InitialBend;
+float _Stiffness;
+float _Drag;
+float _ShiverDrag;
+float _ShiverDirectionality;
+float _WindNormalInfluence;
+float4 _NewNormal;
+
+float4  WIND_SETTINGS_WorldDirectionAndSpeed;
+float   WIND_SETTINGS_FlexNoiseScale;
+float   WIND_SETTINGS_ShiverNoiseScale;
+float   WIND_SETTINGS_Turbulence;
+float   WIND_SETTINGS_GustSpeed;
+float   WIND_SETTINGS_GustScale;
+float   WIND_SETTINGS_GustWorldScale;
+
+float PositivePow_(float base, float power)
+{
+    return pow(max(abs(base), float(FLT_EPSILON)), power);
+}
+
+float AttenuateTrunk_(float x, float s)
+{
+    float r = (x / s);
+    return PositivePow_(r,1/s);
+}
+
+float3 Rotate_(float3 pivot, float3 position, float3 rotationAxis, float angle)
+{
+    rotationAxis = normalize(rotationAxis);
+    float3 cpa = pivot + rotationAxis * dot(rotationAxis, position - pivot);
+    return cpa + ((position - cpa) * cos(angle) + cross(rotationAxis, (position - cpa)) * sin(angle));
+}
+
+struct WindData_
+{
+    float3 Direction;
+    float Strength;
+    float3 ShiverStrength;
+    float3 ShiverDirection;
+	float Gust;
+};
+
+float3 texNoise_(float3 worldPos, float LOD)
+{
+	return tex2Dlod(WIND_SETTINGS_TexNoise,float4(worldPos.xz,0,LOD)).xyz -0.5;
+}
+
+float texGust_(float3 worldPos, float LOD)
+{
+    return tex2Dlod(WIND_SETTINGS_TexGust, float4(worldPos.xz,0, LOD)).x;
+}
+
+WindData_ GetAnalyticalWind(float3 WorldPosition, float3 PivotPosition, float drag, float shiverDrag, float initialBend, float4 time)
+{
+    WindData_ result;
+    float3 normalizedDir = normalize(WIND_SETTINGS_WorldDirectionAndSpeed.xyz);
+
+    float3 worldOffset = normalizedDir * WIND_SETTINGS_WorldDirectionAndSpeed.w * time.y * _BillboardWindSpeed;
+    float3 gustWorldOffset = normalizedDir * WIND_SETTINGS_GustSpeed * time.y;
+
+    // Trunk noise is base wind + gusts + noise
+
+    float3 trunk = float3(0,0,0);
+
+    if(WIND_SETTINGS_WorldDirectionAndSpeed.w > 0.0 || WIND_SETTINGS_Turbulence > 0.0)
+    {
+        trunk = texNoise_((PivotPosition - worldOffset)*WIND_SETTINGS_FlexNoiseScale,3);
+    }
+
+    float gust  = 0.0;
+
+    if(WIND_SETTINGS_GustSpeed > 0.0)
+    {
+        gust = texGust_((PivotPosition - gustWorldOffset)*WIND_SETTINGS_GustWorldScale,3);
+        gust = pow(gust, 2) * WIND_SETTINGS_GustScale;
+    }
+
+    float3 trunkNoise =
+        (
+                (normalizedDir * WIND_SETTINGS_WorldDirectionAndSpeed.w)
+                + (gust * normalizedDir * WIND_SETTINGS_GustSpeed)
+                + (trunk * WIND_SETTINGS_Turbulence)
+        ) * drag;
+
+    // Shiver Noise
+    float3 shiverNoise = texNoise_((WorldPosition - worldOffset)*WIND_SETTINGS_ShiverNoiseScale,0) * shiverDrag * WIND_SETTINGS_Turbulence;
+
+    float3 dir = trunkNoise;
+    float flex = length(trunkNoise) + initialBend;
+    float shiver = length(shiverNoise);
+
+    result.Direction = dir;
+    result.ShiverDirection = shiverNoise;
+    result.Strength = flex;
+    result.ShiverStrength = shiver + shiver * gust;
+	result.Gust = (gust * normalizedDir * WIND_SETTINGS_GustSpeed)
+		+ (trunk * WIND_SETTINGS_Turbulence);
+
+    return result;
+}
+
+void ApplyWindDisplacement_( inout float3    positionWS,
+							inout WindData_    windData,
+                            float3          normalWS,
+                            float3          rootWP,
+                            float           stiffness,
+                            float           drag,
+                            float           shiverDrag,
+                            float           shiverDirectionality,
+                            float           initialBend,
+                            float           shiverMask,
+                            float4          time)
+{
+    WindData_ wind = GetAnalyticalWind(positionWS, rootWP, drag, shiverDrag, initialBend, time);
+
+    if (wind.Strength > 0.0)
+    {
+        float att = AttenuateTrunk_(distance(positionWS, rootWP), stiffness);
+        float3 rotAxis = cross(float3(0, 1, 0), wind.Direction);
+
+        positionWS = Rotate_(rootWP, positionWS, rotAxis, (wind.Strength) * 0.001 * att);
+
+        float3 shiverDirection = normalize(lerp(normalWS, normalize(wind.Direction + wind.ShiverDirection), shiverDirectionality));
+        positionWS += wind.ShiverStrength * shiverDirection * shiverMask;
+    }
+	windData = wind;
+
+}
+
+float3 TransformObjectToWorldNormal_(float3 normalOS)
+{
+#ifdef UNITY_ASSUME_UNIFORM_SCALING
+    return UnityObjectToWorldDir(normalOS);
+#else
+    return normalize(mul(normalOS, (float3x3)GetWorldToObjectMatrix()));
+#endif
+}   
+    
+	 void ModifyVertex(inout VertexData v, inout ExtraV2F d)
+	 {
+	    float4 CENTER = v.vertex;
+     	float3 CORNER = v.normal * v.texcoord2.x;
+        
+        float3 worldspaceCenter = mul(unity_ObjectToWorld, CENTER);
+        float3 cameraPos;
+        
+         if (_InCol == 1)
+         {
+             cameraPos =  GetCameraWorldPosition();
+             cameraPos.y = worldspaceCenter.y;
+         }
+         else
+         {
+            cameraPos =  GetCameraWorldPosition().xyz;
+                   
+            //#if !_PASSSHADOW
+            //    float instanceDistance = length(worldspaceCenter - cameraPos);
+            //    instanceDistance = clamp(instanceDistance,0,20)/20;
+            //    cameraPos.y = lerp(worldspaceCenter.y,cameraPos.instanceDistance);    
+            //#endif                            
+         }                        
+         
+         worldspaceCenter += float3(0, v.texcoord3.y, 0);
+         
+         float3 clipVect;
+                
+         #if _HDRP         
+            //#if UNITY_VERSION  > 20194
+            //    clipVect = (worldspaceCenter);   
+            //#else
+                clipVect = (worldspaceCenter) - _CameraPosition;   
+            //#endif 
+         #else
+                clipVect = (worldspaceCenter) - _CameraPosition;   
+         #endif                 
+	     
+	     float nearCullDistance = clamp(_CullDistance,0,_CullDistance - (_NearFadeDistance/2));	     
+	     
+#if _PASSSHADOW
+
+    float3 camVect;
+    #if _HDRP || _URP
+            camVect = -gVSSunDirection.xyz;//-_WorldSpaceLightPos0.xyz;  
+            if (_InCol == 1)
+            { 
+                camVect.y = 0;
+            }
+    #else
+        if( unity_LightShadowBias.y == 1.0 )
+        {
+            camVect = -_WorldSpaceLightPos0.xyz;  
+            if (_InCol == 1)
+            { 
+            //    camVect.y = 0;
+            }
+        }
+        else
+        {
+            camVect = worldspaceCenter - cameraPos;
+        } 
+    #endif    
+    
+    // camVect = worldspaceCenter - cameraPos;
+#else
+    #if _HDRP
+               float3 camVect = worldspaceCenter - cameraPos;
+               if (camVect.y > cameraPos.y)
+               {
+                    camVect.y = cameraPos.y;
+               }
+     #else
+               float3 camVect = worldspaceCenter - cameraPos;
+               if (camVect.y > cameraPos.y)
+               {
+                  camVect.y = cameraPos.y;
+               }
+     #endif
+#endif	  
+         
+         	if (length(clipVect) < nearCullDistance || length(clipVect) > _FarCullDistance)
+         	{
+         		CORNER.xyz *= 0;
+         	}
+         	else
+         	{
+         	   //if (_UseFade == 1)
+         	   //{
+         	       float distanceToCamera = length(clipVect);
+              		float farDistance = abs(_FarCullDistance - distanceToCamera);   
+              		float nearDistance = distanceToCamera - nearCullDistance;
+              		if (farDistance < _FadeDistance)
+              		{
+              				d.extraV2F0.z = (farDistance / _FadeDistance);
+              		}
+              		else if (nearDistance < _NearFadeDistance)
+              		{
+              		        d.extraV2F0.z = clamp(nearDistance/_NearFadeDistance,0,1)*2;
+              		}
+              		else
+              		{
+              				d.extraV2F0.z = 0;
+              		}
+                //}
+                    float3 zaxis = normalize(camVect);
+              		float3 xaxis = normalize(cross(float3(0, 1, 0), zaxis));
+              		float3 yaxis = cross(zaxis, xaxis);
+              
+              		float4x4 lookatMatrix = {
+              			xaxis.x,            yaxis.x,            zaxis.x,       0,
+              			xaxis.y,            yaxis.y,            zaxis.y,       0,
+              			xaxis.z,            yaxis.z,            zaxis.z,       0,
+              			0, 0, 0,  1
+              		};
+              
+              #if _PASSSHADOW
+                    if (_InCol == 1)
+                    { 
+              		    v.vertex = mul(lookatMatrix, float4(CORNER.x, CORNER.y, (yaxis.y - 1.0) *   v.texcoord2.y  , 1));
+              		}
+              		else
+              		{
+              		    #if _HDRP || _URP
+              		        v.vertex = mul(lookatMatrix, float4(CORNER.x, CORNER.y, (yaxis.y - 1.0) *  -v.texcoord2.y * _ShadowOffset , 1));
+              		    #else
+              		     if( unity_LightShadowBias.y == 1.0 )
+                         {
+                            v.vertex = mul(lookatMatrix, float4(CORNER.x, CORNER.y, (yaxis.y - 1.0) *  -v.texcoord2.y * _ShadowOffset , 1));
+                         }
+                         else
+                         {
+                            v.vertex = mul(lookatMatrix, float4(CORNER.x, CORNER.y, (yaxis.y - 1.0) *  v.texcoord2.y , 1));
+                         }
+              		    #endif              		              		   
+              		}              		              		 
+              #else
+                    v.vertex = mul(lookatMatrix, float4(CORNER.x, CORNER.y, (yaxis.y - 1.0) *  v.texcoord2.y , 1));
+              #endif	
+
+              		v.vertex.xyz += CENTER.xyz;
+                       	
+         	        v.normal = normalize(mul(unity_WorldToObject, float4(-zaxis.xyz, 1)).xyz);
+         	        v.tangent.xyz =normalize(cross(float3(0, 1, 0), v.normal)); 
+         	        v.tangent.w = -1;
+         	            
+                    v.texcoord0.x /= _InRow;
+            		v.texcoord0.y /= _InCol;
+            
+            
+            		float angle;
+            		float step;
+            		float2 atanDir = normalize(float2(-zaxis.z, -zaxis.x));
+            		angle = (atan2(atanDir.y, atanDir.x) / 6.28319) + 0.5; // angle around Y in range 0....1
+            		angle += v.texcoord1.x;
+            		angle -= (int)angle;
+            		step = 1.0 / _InRow;
+            		
+            		v.texcoord0.x += step * ((int)((angle + step * 0.5) * _InRow));
+            		step = 1.0 / _InCol;
+            		angle = saturate(dot(-zaxis, float3(0, 1, 0)));
+            		angle = clamp(angle, 0, step*(_InCol - 1));
+            		v.texcoord0.y += step * ((int)((angle + step * 0.5) * _InCol));
+            		d.extraV2F0.x = v.texcoord1.y;                        	
+            		
+            		//#ifdef AT_HUE_VARIATION_ON
+                    //		float hueVariationAmount = frac(CENTER.x + CENTER.y + CENTER.z);
+                    //		d.extraV2F0.y = saturate(hueVariationAmount * _HueVariation.a);
+                    //#endif
+                    
+                    //#ifdef LOD_FADE_CROSSFADE
+                    //		o.dc = VS_ComputeDitherScreenPos(v.vertex);
+                    //#endif
+
+#ifdef USE_HDWIND
+		float initialBend = 1;
+ 	    float stiffness = 1;
+		float drag = 0.3;
+		float shiverDrag = 0;
+		float shiverDirectionality = 1;
+
+		float3 positionWS = TransformObjectToWorld(v.vertex.xyz);
+		float3 rootWP = TransformObjectToWorld(CENTER.xyz);
+		if (positionWS.y > rootWP.y)
+		{
+			float3 normalWS = TransformObjectToWorldNormal_(v.normal);
+			WindData_ windData;
+			ApplyWindDisplacement_(positionWS, windData, normalWS, rootWP, stiffness, drag, shiverDrag, shiverDirectionality, initialBend,20, _Time); //
+			v.vertex.xyz = TransformWorldToObject(positionWS).xyz;
+		}
+#endif
+
+         	}        
+	 }
+  
+ 
+ float Remap (float value, float from1, float to1, float from2, float to2) {
+     return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+ }
+ 
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{
+	    float lodFade = d.extraV2F0.z;
+		float4 screenPosNorm = d.screenPos / d.screenPos.w;
+    	screenPosNorm.z = ( UNITY_NEAR_CLIP_VALUE >= 0 ) ? screenPosNorm.z : screenPosNorm.z * 0.5 + 0.5;
+    	float2 clipScreen = screenPosNorm.xy * _ScreenParams.xy;
+    	ApplyDitherCrossFadeVSP(clipScreen,lodFade);    	                 
+        
+		//fixed4 c = tex2Dbias(_MainTex, half4(d.texcoord0.xy + uvOffset, 0, _MipmapBias)) * _Color;
+		fixed4 c = tex2D(_MainTex, d.texcoord0.xy);
+      		       
+        
+        //#ifdef AT_HUE_VARIATION_ON
+        //	half3 shiftedColor = lerp(c.rgb, _HueVariation.rgb, d.extraV2F0.y);
+        //	half maxBase = max(c.r, max(c.g, c.b));
+        //	half newMaxBase = max(shiftedColor.r, max(shiftedColor.g, shiftedColor.b));
+        //	maxBase /= newMaxBase;
+        //	maxBase = maxBase * 0.5f + 0.5f;
+        //	shiftedColor.rgb *= maxBase;
+        //	c.rgb = saturate(shiftedColor);
+        //#endif
+        
+        o.Albedo = c.rgb * d.extraV2F0.x *_Color;
+        o.Albedo = clamp(o.Albedo * _Brightness, 0, 1);            
+        float4 normalSample = tex2D(_Bump, d.texcoord0.xy);    
+        float3 viewSpaceNormal = normalSample.rgb * 2.0 - 1.0;       
+        float3 worldSpaceNormal = mul(fixed4(viewSpaceNormal,0),UNITY_MATRIX_V).rgb; 
+        o.Normal = mul(d.TBNMatrix,worldSpaceNormal);               
+        o.Normal.xy *= _NormalStrength;
+        o.Occlusion = _Occlusion;
+        o.Smoothness = _Smoothness;
+        o.Metallic = _Metallic;
+	    o.Specular = _Specular;
+                  
+        #ifdef USE_SNOW        
+        	half triangleSnowAmount = dot(worldSpaceNormal, float3(0, 1, 0)) * 0.5 + 0.5;
+        	o.Albedo = lerp(o.Albedo, (_SnowColor.xyz * _SnowBrightness), _SnowAmount * triangleSnowAmount * _SnowBlendFactor);
+        #endif
+        
+        #if _HDRP
+                float offset = ((normalSample.a) * _DepthBoundsSize * 2) - _DepthBoundsSize;            
+                float3 offsetWorldSpacePosition = d.worldSpacePosition +  d.worldSpaceViewDir * offset; 
+                offsetWorldSpacePosition = GetCameraRelativePositionWS(offsetWorldSpacePosition);
+                float3 offsetLocalSpacePosition = mul(unity_WorldToObject, float4(offsetWorldSpacePosition, 1)).xyz;
+                float4 offsetClipSpace = mul(mul(UNITY_MATRIX_VP, UNITY_MATRIX_M), float4(offsetLocalSpacePosition.xyz, 1.0)); //UnityObjectToClipPos(offsetLocalSpacePosition);                              
+                o.outputDepth =offsetClipSpace.z/offsetClipSpace.w;        
+        #else
+                float offset = ((normalSample.a) * _DepthBoundsSize * 2) - _DepthBoundsSize;
+                float3 offsetWorldSpacePosition = d.worldSpacePosition +  d.worldSpaceViewDir * offset; 
+                float3 offsetLocalSpacePosition = mul(unity_WorldToObject, float4(offsetWorldSpacePosition, 1)).xyz;
+                float4 offsetClipSpace = mul(mul(UNITY_MATRIX_VP, UNITY_MATRIX_M), float4(offsetLocalSpacePosition.xyz, 1.0)); //UnityObjectToClipPos(offsetLocalSpacePosition);                              
+                o.outputDepth =offsetClipSpace.z/offsetClipSpace.w;
+                //o.outputDepth =d.clipPos.z;
+        #endif                      
+                
+        o.Albedo *= _LODDebugColor;        
+        o.Alpha = c.a;        	        	
+        clip (o.Alpha - _Cutoff);
+               
+	}
+
+END_CODE
+

@@ -1,0 +1,11 @@
+﻿BEGIN_OPTIONS
+   ShaderName "AwesomeTechnologies/Development/Trees/Tree_Leaves_Unlit"       
+   Tags{ "RenderType" = "TransparentCutout"  "Queue" = "AlphaTest+0" }
+   Workflow "Unlit"           
+END_OPTIONS
+
+// "Relative/Path/File.subshader" // merge all blocks into this shader. Like a better include.
+BEGIN_SUBSHADERS
+  "Tree_Leaves_Specular_Development.surfshader"
+END_SUBSHADERS
+

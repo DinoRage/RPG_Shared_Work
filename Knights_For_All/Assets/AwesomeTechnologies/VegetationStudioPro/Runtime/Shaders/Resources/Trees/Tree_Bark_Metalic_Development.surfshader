@@ -1,0 +1,75 @@
+﻿BEGIN_OPTIONS
+    ShaderName "AwesomeTechnologies/Development/Trees/Tree_Bark_Metallic"   
+ 	Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" }
+    Workflow "Metallic"              
+END_OPTIONS
+
+BEGIN_PROPERTIES
+		_Color("Color", Color) = (1,1,1,0)
+    	_MainTex("MainTex", 2D) = "white" {}
+    	[NoScaleOffset]_BumpMap("BumpMap", 2D) = "bump" {}
+    	_BumpScale("BumpScale", Range( 0 , 5)) = 1
+    	[NoScaleOffset]_MetalicRAOGSmothnessA("Metalic (R) AO (G) Smothness (A)", 2D) = "white" {}
+    	_MetallicPower("Metallic Power", Range( 0 , 2)) = 0
+    	_AmbientOcclusionPower("Ambient Occlusion Power", Range( 0 , 1)) = 1
+    	_SmoothnessPower("Smoothness Power", Range( 0 , 2)) = 0
+    	_DetailMask("DetailMask", 2D) = "black" {}
+    	_DetailAlbedoMap("DetailAlbedoMap", 2D) = "white" {}
+    	[NoScaleOffset]_DetailNormalMap("DetailNormalMap", 2D) = "bump" {}
+    	_DetailNormalMapScale("DetailNormalMapScale", Range( 0 , 5)) = 1
+    	[NoScaleOffset]_DetailMetalicRAOGSmothnessA("Detail Metalic (R) AO (G) Smothness (A) ", 2D) = "white" {}    
+    	_LODDebugColor ("LOD Debug color", Color) = (1,1,1,1)	
+END_PROPERTIES
+
+BEGIN_SUBSHADERS
+"../VertexWind_Stacked.surfshader"  
+"../Instanced_Indirect_Stacked.surfshader"  
+"../DitherCrossfade_Stacked.surfshader"  
+END_SUBSHADERS
+
+BEGIN_DEFINES
+    #pragma target 5.0	    
+END_DEFINES
+
+BEGIN_CODE
+	uniform float _BumpScale;
+    uniform sampler2D _BumpMap;
+    uniform sampler2D _MainTex;
+    uniform float4 _MainTex_ST;
+    uniform float _DetailNormalMapScale;
+    uniform sampler2D _DetailNormalMap;
+    uniform sampler2D _DetailAlbedoMap;
+    uniform float4 _DetailAlbedoMap_ST;
+    uniform float4 _DetailNormalMap_ST;
+    uniform sampler2D _DetailMask;
+    uniform float4 _DetailMask_ST;
+    uniform float4 _Color;
+    uniform sampler2D _MetalicRAOGSmothnessA;
+    uniform sampler2D _DetailMetalicRAOGSmothnessA;
+    uniform float _MetallicPower;
+    uniform float _SmoothnessPower;
+    uniform float _AmbientOcclusionPower;
+
+    fixed4 _LODDebugColor;
+
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{       
+        float4 detailMaskSample = tex2D( _DetailMask, d.texcoord0.xy );
+        float3 normal = lerp( UnpackScaleNormal( tex2D( _BumpMap,  d.texcoord0.xy ), _BumpScale ) , UnpackScaleNormal( tex2D( _DetailNormalMap, d.texcoord3.xy ), _DetailNormalMapScale ) , detailMaskSample.a);
+        o.Normal = normal;		
+        
+        float4 color = lerp( tex2D( _MainTex, d.texcoord0.xy ) , tex2D( _DetailAlbedoMap, d.texcoord0.xy ) , detailMaskSample.a);
+        o.Albedo = ( color * _Color ).rgb * _LODDebugColor.rgb;
+		
+		float4 mso = lerp( tex2D( _MetalicRAOGSmothnessA, d.texcoord0.xy ) , tex2D( _DetailMetalicRAOGSmothnessA, d.texcoord0.xy ) , detailMaskSample.a);
+		o.Metallic = ( mso.r * _MetallicPower );
+        o.Smoothness = ( mso.a * _SmoothnessPower );
+        
+        float occlusion = clamp( mso.g , ( 1.0 - _AmbientOcclusionPower ) , 1.0 );
+        o.Occlusion = occlusion;
+        
+        o.Alpha = 1;		            
+	}
+
+END_CODE
+

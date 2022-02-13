@@ -1,0 +1,141 @@
+﻿
+BEGIN_OPTIONS
+    ShaderName "AwesomeTechnologies/Development/Grass/Grass"     
+    Tags { "RenderType"="TransparentCutout" "Queue"="Alphatest" }
+END_OPTIONS
+
+BEGIN_SUBSHADERS
+    "../Instanced_Indirect_Stacked.surfshader"  
+    "../TouchReact_Stacked.surfshader"  
+    "../DitherCrossfade_Stacked.surfshader"  
+    
+    
+END_SUBSHADERS
+
+BEGIN_PASS
+Cull Off
+END_PASS
+
+BEGIN_PROPERTIES
+	_Color ("Color", Color) = (1,1,1,1)
+    _ColorB ("Color B", Color) = (1,1,1,1)
+    _MainTex ("Albedo (RGB)", 2D) = "white" {}
+    _AG_ColorNoiseTex ("ColorNoise", 2D) = "white" {}
+    _AG_ColorNoiseArea ("Color noise pos and area", Vector) = (0,0,0,1)
+    _Cutoff("Cutoff" , Range(0,1)) = .5
+    _Wetness("Wetness" , Range(0,1)) = 0
+    _RandomDarkening("Random darkening" , Range(0,1)) = .5
+    _RootAmbient("Root ambient" , Range(0,1)) = .5
+    _Speed("Sine speed multiply" , Range(0,10)) = 5
+    _WavesSpeed("Waves speed multiply" , Range(0,4)) = 1
+    [Toggle] FAR_CULL("Use cull", Float) = 1
+    _CullFarStart("Cull start" , Range(0,1000)) = 50 
+    _CullFarDistance("Cull fade distance" , Range(0,200)) = 10
+    _WindAffectDistance("Wind affect distance" , Range(0,200)) = 50
+    [Toggle] TOUCH_BEND("Use touch bend", Float) = 1
+    _LODDebugColor ("LOD Debug color", Color) = (1,1,1,1)
+END_PROPERTIES
+
+
+
+BEGIN_DEFINES	
+    #pragma target 5.0	 
+	#define AG_GRASS_MAXIMUM_WIND_WAVE_BEND 0.2
+	#define AG_GRASS_SIN_NOISE_BEND 0.02
+		
+	// vertex components
+	#define AG_PHASE_SHIFT v.vertexColor.g
+	#define AG_BEND_FORCE  v.vertexColor.b
+	#define AG_AO_MULTIPLIER v.vertexColor.r					
+END_DEFINES
+
+BEGIN_CODE 
+        sampler2D	_MainTex;
+        fixed4		_Color;
+        fixed4		_ColorB;
+        fixed		_RandomDarkening;
+        fixed		_RootAmbient;
+        fixed		_Speed;
+        fixed		_WavesSpeed;
+        float	    _Wetness;
+        float       _Cutoff;               
+        fixed		_WindAffectDistance;
+        
+        // color areas
+        sampler2D	_AG_ColorNoiseTex;
+        float4		_AG_ColorNoiseArea;
+        
+        // wind uniforms
+        sampler2D	_AW_WavesTex;
+        float4		_AW_DIR;
+        
+        fixed4 _LODDebugColor;
+          
+          
+  inline fixed rand(float2 co)
+  {
+      return frac(sin(dot(co ,half2(12.9898, 78.233))) * 43758.5453);
+  }
+  
+	 void ModifyVertex(inout VertexData v, inout ExtraV2F d)
+	 {
+	 	            float3 transformPosition = mul(unity_ObjectToWorld, float4(0,0,0,1));                 
+     				float distanceToCamera = length(transformPosition - GetCameraWorldPosition());
+     				
+                    float forceInclude = v.vertexColor.r;
+                                                   
+     					float3 pos = mul(unity_ObjectToWorld, v.vertex);
+     					float3 result = pos;     					    					                                            
+                         
+     					UNITY_BRANCH
+     					//if(distanceToCamera < _WindAffectDistance)
+     					//{
+                  		    #define FORCE _AW_DIR.y
+     						#define AW_WavesSize _AW_DIR.w
+                         
+     						#define AW_wavesPos (pos.xz - _AW_DIR.xz * _Time.y * FORCE * _WavesSpeed)
+     						#define AW_windWave (tex2Dlod(_AW_WavesTex, float4(AW_wavesPos/AW_WavesSize,0,0)).r)
+                         
+     						float force = FORCE * AW_windWave;
+     						float time = _Time.y * FORCE * _Speed;
+                         
+     						float baseBendSin = sin(time + AG_PHASE_SHIFT * 6.28319);
+                            
+     						// main bend calculation
+     						#define AG_BaseBend (saturate(force) * AG_GRASS_MAXIMUM_WIND_WAVE_BEND + baseBendSin * AG_GRASS_SIN_NOISE_BEND)
+     						#define AG_BigBend (AG_BaseBend * AG_BEND_FORCE)
+     						result.xz += _AW_DIR.xz * AG_BigBend;                
+     					//}     					     		     					     		
+     					     		
+     					#if _HDRP
+                         	   float3 instance_pos =  mul(GetObjectToWorldMatrix(), float4(0.0,0.0,0.0, 1.0)).xyz + _WorldSpaceCameraPos.xyz;
+                        #else
+                               float3 instance_pos =  mul(GetObjectToWorldMatrix(), float4(0.0,0.0,0.0, 1.0)).xyz;
+                        #endif			    				       			
+     					
+     					d.extraV2F0.a = saturate(rand(instance_pos.xz)+_RandomDarkening) * saturate(_RootAmbient + AG_AO_MULTIPLIER);
+                                      
+                        // read color areas from texture and lerp colors
+                        #define AG_ColorNoise_R tex2Dlod (_AG_ColorNoiseTex, float4((instance_pos.xz - _AG_ColorNoiseArea.xz)/_AG_ColorNoiseArea.y,0,0)).r
+                        d.extraV2F0.rgb = lerp(_Color.rgb, _ColorB.rgb, AG_ColorNoise_R) * d.extraV2F0.a;	                                                             				
+                                                         
+     					v.normal = float3(0,1,0);
+       					v.tangent.xyz = cross(v.normal,float3(0,0,1));                    
+     					v.vertex.xyz = mul(unity_WorldToObject, float4(result,1)).xyz;	      					
+	 }
+	 
+
+
+	void SurfaceFunction(inout Surface o, ShaderData d)
+	{           
+	    fixed4 c = tex2D (_MainTex, d.texcoord0);		
+        o.Albedo = c.rgb * d.extraV2F0.rgb * _LODDebugColor.rgb;
+        o.Alpha = c.a;                     
+        clip (o.Alpha - _Cutoff);                      
+        
+   
+        
+	}
+
+END_CODE
+
