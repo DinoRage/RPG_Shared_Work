@@ -26,24 +26,15 @@ MonoBehaviour:
     castTime: 0
     castInRun: 0
     castBarVisible: 1
+    faceCursorWhileCasting: 1
+    faceCursorWhenOnCastStart: 1
+    faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0
     animationTriggered: 0
     comboStarsAfterCastComplete: 0
     cancelStealth: 0
     effectsRequirements: []
-    useRequirements:
-    - requirementType: 2
-      itemRequiredID: -1
-      itemRequiredREF: {fileID: 0}
-      itemRequiredCount: 0
-      consumeItem: 0
-      weaponRequired: 
-      useCost: 10
-      statCostID: 3
-      statCostREF: {fileID: 11400000, guid: c8e945ad2f0582d46abb468a7b77f5d3, type: 2}
-      costType: 0
-      inCombat: 0
-      stealthed: 0
+    useRequirements: []
     targetType: 0
     HitSettings: []
     isToggle: 0
@@ -80,6 +71,7 @@ MonoBehaviour:
     isProjectileNearbyUnit: 0
     projectileDestroyedByEnvironment: 1
     projectileAffectedByGravity: 0
+    projectileShootOnClickPosition: 0
     mustLookAtTarget: 1
     squareWidth: 0
     squareLength: 0

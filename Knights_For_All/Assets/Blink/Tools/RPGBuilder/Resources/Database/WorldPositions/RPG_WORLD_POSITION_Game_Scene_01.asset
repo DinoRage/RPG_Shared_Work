@@ -16,6 +16,6 @@ MonoBehaviour:
   _name: Game_Scene_01
   _fileName: RPG_WORLD_POSITION_Game_Scene_01
   displayName: Game_Scene_01
-  position: {x: -81.82702, y: 15, z: -974.41}
+  position: {x: -81.82702, y: 0.32, z: -974.41}
   useRotation: 1
   rotation: {x: -0, y: 0, z: 0}

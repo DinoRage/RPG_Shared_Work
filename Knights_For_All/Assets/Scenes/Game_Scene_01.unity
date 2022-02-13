@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442540783}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 628.22266, y: 0, z: -373.4375}
+  m_LocalPosition: {x: -76.26953, y: 0, z: -834.27734}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1595555702}
@@ -237,7 +237,7 @@ MonoBehaviour:
   PersistentVegetationStorage: {fileID: 474367812}
   PredictiveCellLoaderCellsPerFrame: 1
   LoadPotentialVegetationCells: 1
-  CurrentTabIndex: 2
+  CurrentTabIndex: 1
   VegetationPackageIndex: 0
   SeaLevel: 0
   ExcludeSeaLevelCells: 0
@@ -324,6 +324,13 @@ MonoBehaviour:
     CameraCullingMode: 0
     VegetationSystemPro: {fileID: 474367810}
     WindSampler: {fileID: 940440357}
+  - SelectedCamera: {fileID: 1668506452}
+    VegetationStudioCameraType: 0
+    RenderDirectToCamera: 0
+    RenderBillboardsOnly: 0
+    CameraCullingMode: 0
+    VegetationSystemPro: {fileID: 474367810}
+    WindSampler: {fileID: 845924440}
   ShowVegetationCells: 0
   ShowBillboardCells: 0
   ShowVisibleBillboardCells: 0
@@ -955,8 +962,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940440357}
-  m_LocalRotation: {x: 0.062003143, y: -0.5217816, z: 0.038048655, w: 0.8499717}
-  m_LocalPosition: {x: 628.22906, y: 24.1621, z: -373.49805}
+  m_LocalRotation: {x: 0.061300028, y: 0.91835976, z: -0.1574845, w: 0.35784963}
+  m_LocalPosition: {x: -76.32714, y: 42.322044, z: -834.3058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474367811}
@@ -1126,7 +1133,7 @@ GameObject:
   m_Layer: 0
   m_Name: Start_Here
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1138,7 +1145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266536619}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -81.82702, y: 15, z: -974.41}
+  m_LocalPosition: {x: -81.82702, y: 0.32, z: -974.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1321,9 +1328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940b17483ed4b7845a39e51ecb290c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentTabIndex: 0
+  CurrentTabIndex: 1
   VegetationSystemList:
   - {fileID: 474367810}
+  PostProcessProfileInfoList: []
   PostProcessingLayer:
     serializedVersion: 2
     m_Bits: 0

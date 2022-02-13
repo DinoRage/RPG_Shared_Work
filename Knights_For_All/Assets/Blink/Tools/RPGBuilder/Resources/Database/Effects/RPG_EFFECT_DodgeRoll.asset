@@ -72,8 +72,8 @@ MonoBehaviour:
     petSPawnCount: 0
     petScaleWithCharacter: 0
     knockbackDistance: 0
-    motionDistance: 5
-    motionSpeed: 0.8
+    motionDistance: 7.5
+    motionSpeed: 1
     motionDirection: {x: 0, y: 0, z: 5}
     motionIgnoreUseCondition: 0
     isImmuneDuringMotion: 1

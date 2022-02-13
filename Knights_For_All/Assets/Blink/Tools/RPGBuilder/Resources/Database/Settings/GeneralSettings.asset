@@ -149,12 +149,12 @@ MonoBehaviour:
     category: COMBAT
   - actionName: ACTIVE_BLOCKING
     actionDisplayName: Block
-    defaultKey: 324
+    defaultKey: 306
     isUnique: 1
     category: COMBAT
   - actionName: SPRINT
     actionDisplayName: Sprint
-    defaultKey: 304
+    defaultKey: 0
     isUnique: 1
     category: MOVEMENT
   - actionName: INTERACT

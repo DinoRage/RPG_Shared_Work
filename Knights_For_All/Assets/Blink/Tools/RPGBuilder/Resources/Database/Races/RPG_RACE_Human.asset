@@ -24,13 +24,13 @@ MonoBehaviour:
   factionREF: {fileID: 11400000, guid: 3373acf609049604096ebefd29b9dd77, type: 2}
   factionID: 0
   speciesID: -1
-  malePrefab: {fileID: 5168523953680767656, guid: 217eae6781003314cb007ca5cf283e69, type: 3}
+  malePrefab: {fileID: 7092433710011997027, guid: 29be6b445c41b5c42a51c4df505f0719, type: 3}
   maleIcon: {fileID: 21300000, guid: 1a8f6fd0e567f5e4eb90ed11a0abd56c, type: 3}
   femalePrefab: {fileID: 6373494219852488072, guid: 1fb8a18395915ed4cb03838d275d8970, type: 3}
   femaleIcon: {fileID: 21300000, guid: 1a8f6fd0e567f5e4eb90ed11a0abd56c, type: 3}
   dynamicAnimator: 1
-  restAnimatorController: {fileID: 22100000, guid: bce07712ca593f34f9c226bb6b2bcba4, type: 2}
-  combatAnimatorController: {fileID: 22100000, guid: 338280de24c75ba45a4e1a06218a1385, type: 2}
+  restAnimatorController: {fileID: 22100000, guid: c5cac23a4adc14440884b5a328602fa6, type: 2}
+  combatAnimatorController: {fileID: 22100000, guid: c5cac23a4adc14440884b5a328602fa6, type: 2}
   availableClasses: []
   weaponTemplates:
   - weaponTemplateID: 0
@@ -47,11 +47,6 @@ MonoBehaviour:
     actionKeyName: DODGE_ROLL
     abilityREF: {fileID: 0}
     abilityID: 20
-  - keyType: 1
-    key: 0
-    actionKeyName: ACTIVE_BLOCKING
-    abilityREF: {fileID: 0}
-    abilityID: 8
   allocationStatPoints: 0
   allocatedStatsEntries:
   - statREF: {fileID: 11400000, guid: 3ba412ea703bc2f4697ddcf06f7f13ec, type: 2}
@@ -79,8 +74,3 @@ MonoBehaviour:
     maxValue: -1
     cost: 1
     valueAdded: 1
-  - statREF: {fileID: 11400000, guid: c8e945ad2f0582d46abb468a7b77f5d3, type: 2}
-    statID: 3
-    maxValue: -1
-    cost: 5
-    valueAdded: 5

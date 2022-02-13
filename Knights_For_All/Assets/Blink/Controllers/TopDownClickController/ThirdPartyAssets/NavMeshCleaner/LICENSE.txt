@@ -1,0 +1,8 @@
+Blink Studios is legally allowed to include NavMeshCleaner in any of its products.
+
+Developers can make use of NavMeshCleaner
+Developers cannot re-distribute NavMeshCleaner
+Developers cannot monetize NavMeshCleaner in any way
+
+Thank you to VisualWorks for developing this awesome tool.
+Email: ksi@softnette.com
