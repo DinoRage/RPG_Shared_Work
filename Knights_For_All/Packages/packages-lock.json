@@ -1,5 +1,43 @@
 {
   "dependencies": {
+    "com.jbooth.microsplat.anti-tile": {
+      "version": "file:com.jbooth.microsplat.anti-tile",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.jbooth.microsplat.core": "3.9.0"
+      }
+    },
+    "com.jbooth.microsplat.core": {
+      "version": "file:com.jbooth.microsplat.core",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.jbooth.microsplat.procedural-texture": {
+      "version": "file:com.jbooth.microsplat.procedural-texture",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.jbooth.microsplat.core": "3.9.0"
+      }
+    },
+    "com.jbooth.microsplat.tessellation": {
+      "version": "file:com.jbooth.microsplat.tessellation",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.jbooth.microsplat.core": "3.9.0"
+      }
+    },
+    "com.jbooth.microsplat.texture-clusters": {
+      "version": "file:com.jbooth.microsplat.texture-clusters",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.jbooth.microsplat.core": "3.9.0"
+      }
+    },
     "com.unity.collab-proxy": {
       "version": "1.7.1",
       "depth": 0,
