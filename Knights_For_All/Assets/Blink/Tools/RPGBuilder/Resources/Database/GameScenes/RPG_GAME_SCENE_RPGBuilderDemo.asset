@@ -89,8 +89,7 @@ MonoBehaviour:
     lightTransitionSpeed: 0.5
     skyboxCubemap: {fileID: 8900000, guid: 5e14362d89ed0ff438cd79d8be7037be, type: 3}
     skyboxTransitionSpeed: 0.5
-    cameraParticle: {fileID: 7646778633900776644, guid: e5d44d125fb970b49b90c574543dfe95,
-      type: 3}
+    cameraParticle: {fileID: 7646778633900776644, guid: e5d44d125fb970b49b90c574543dfe95, type: 3}
     musicClips:
     - {fileID: 8300000, guid: 509b714987751894ea3ae2ac980e7304, type: 3}
     - {fileID: 8300000, guid: 27ae589d4af618948ad65f4a5f4215f4, type: 3}
@@ -125,8 +124,7 @@ MonoBehaviour:
     lightTransitionSpeed: 0.5
     skyboxCubemap: {fileID: 8900000, guid: beb1457d375110e468b8d8e1f29fccea, type: 3}
     skyboxTransitionSpeed: 0.5
-    cameraParticle: {fileID: 3373623122095957312, guid: cb83ef3f80dbe1444bd5fa37b2ea4cdd,
-      type: 3}
+    cameraParticle: {fileID: 3373623122095957312, guid: cb83ef3f80dbe1444bd5fa37b2ea4cdd, type: 3}
     musicClips:
     - {fileID: 8300000, guid: cf8a8dc92b626a948bf924f3acc59c65, type: 3}
     - {fileID: 8300000, guid: b25699b930ca8f24c8bb73149eec0615, type: 3}
@@ -185,8 +183,7 @@ MonoBehaviour:
       currencyREF: {fileID: 0}
       factionREF: {fileID: 0}
       gameSceneREF: {fileID: 0}
-      prefab: {fileID: 4509816909487456834, guid: 2ecb7b33685df3e4c8d421e83fd90303,
-        type: 3}
+      prefab: {fileID: 4509816909487456834, guid: 2ecb7b33685df3e4c8d421e83fd90303, type: 3}
       spawnPosition: {x: -658.84, y: 80.97976, z: -729.91}
       audioClip: {fileID: 0}
       textNodeREF: {fileID: 0}

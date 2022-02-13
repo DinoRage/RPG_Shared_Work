@@ -10,7 +10,7 @@ Material:
   m_Name: Skeleton_1
   m_Shader: {fileID: 4800000, guid: 901cb4d38cc5df3478328f726618464c, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -55,6 +55,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Tatoo:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _TextureSample0:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -82,10 +86,14 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - __dirty: 1
+    - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorB: {r: 1, g: 1, b: 1, a: 0}
     - _ColorG: {r: 1, g: 1, b: 1, a: 0}
     - _ColorR: {r: 1, g: 1, b: 1, a: 0}
-    - _EmissionColor: {r: 0, g: 0.9225718, b: 2.193, a: 1}
+    - _ColorTatooB: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorTatooG: {r: 1, g: 1, b: 1, a: 0}
+    - _ColorTatooR: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0.3652545, g: 0.6983266, b: 0.764151, a: 1}
+  m_BuildTextureStacks: []
