@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442540783}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -141.79688, y: 0, z: -60.253906}
+  m_LocalPosition: {x: -386.1328, y: 0, z: -755.8594}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1595555702}
@@ -237,7 +237,7 @@ MonoBehaviour:
   PersistentVegetationStorage: {fileID: 474367812}
   PredictiveCellLoaderCellsPerFrame: 1
   LoadPotentialVegetationCells: 1
-  CurrentTabIndex: 1
+  CurrentTabIndex: 5
   VegetationPackageIndex: 0
   SeaLevel: 0
   ExcludeSeaLevelCells: 0
@@ -339,28 +339,28 @@ MonoBehaviour:
   ShowBiomeCells: 0
   ShowVegetationMaskCells: 0
   ShowHeatMap: 0
-  ShowTerrainTextures: 1
+  ShowTerrainTextures: 0
   ShowLODDebug: 0
   ShowVegetationPackageGeneralSettingsMenu: 1
-  ShowVegetationPackageNoiseMenu: 1
+  ShowVegetationPackageNoiseMenu: 0
   ShowTerrainTextureRulesMenu: 1
   ShowTextureMaskRulesMenu: 1
   ShowVegetationMaskRulesMenu: 1
   ShowShaderSettingsMenu: 1
-  ShowPositionMenu: 1
+  ShowPositionMenu: 0
   ShowDistanceFalloffMenu: 1
   ShowBiomeRulesMenu: 1
   ShowConcaveLocationRulesMenu: 1
   ShowColliderRulesMenu: 1
-  ShowBillboardsMenu: 1
-  ShowVegetationItemSettingsMenu: 1
+  ShowBillboardsMenu: 0
+  ShowVegetationItemSettingsMenu: 0
   ShowTerrainSourceSettingsMenu: 1
   ShowAddVegetationItemMenu: 1
-  ShowLODMenu: 1
+  ShowLODMenu: 0
   VegetationStudioTerrainObjectList:
   - {fileID: 1098741443}
   VegetationPackageProList:
-  - {fileID: 11400000, guid: d5c9476dce06a7f4da0a7bbcbb4729fb, type: 2}
+  - {fileID: 11400000, guid: 4a84867a155aac8448e7e6ac11bd2216, type: 2}
   WindControllerSettingsList:
   - ControlerPropertyList:
     - SerializedControlerPropertyType: 1
@@ -795,9 +795,9 @@ MonoBehaviour:
   VegetationSystemPro: {fileID: 474367810}
   SetBakedCollidersStatic: 1
   ConvertBakedCollidersToMesh: 0
-  CurrentTabIndex: 0
+  CurrentTabIndex: 1
   ShowDebugCells: 0
-  ShowColliders: 0
+  ShowColliders: 1
 --- !u!114 &474367815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   VegetationSystemPro: {fileID: 474367810}
   CurrentTabIndex: 1
   VegetationPackageIndex: 0
-  VegetationPackageTextureIndex: 0
+  VegetationPackageTextureIndex: 1
   ShowCurvesMenu: 1
   ShowNoiseMenu: 1
 --- !u!1 &813319757
@@ -870,8 +870,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845924440}
-  m_LocalRotation: {x: 0.20698881, y: 0.43050584, z: -0.10190222, w: 0.87260324}
-  m_LocalPosition: {x: -141.8929, y: 47.33854, z: -60.321926}
+  m_LocalRotation: {x: -0.07091884, y: -0.92959374, z: 0.24439885, w: -0.26663682}
+  m_LocalPosition: {x: -386.13535, y: 66.50525, z: -755.88855}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474367811}

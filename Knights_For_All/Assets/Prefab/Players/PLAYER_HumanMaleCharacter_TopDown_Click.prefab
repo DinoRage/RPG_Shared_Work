@@ -9024,6 +9024,7 @@ GameObject:
   - component: {fileID: 3829518997683009263}
   - component: {fileID: 5461638774945546083}
   - component: {fileID: 5883354064827715078}
+  - component: {fileID: 8289360017404297430}
   m_Layer: 10
   m_Name: PLAYER_HumanMaleCharacter_TopDown_Click
   m_TagString: Player
@@ -9605,6 +9606,39 @@ MonoBehaviour:
   _increase_speed: 1
   _use_increase_volume: 1
   _scale_amount: 0.1
+--- !u!114 &8289360017404297430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092433710011997027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94547516ee21d3a439b1e905219d247f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShoot:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFootR:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFootL:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLand:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStrike:
+    m_PersistentCalls:
+      m_Calls: []
+  OnWeaponSwitch:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7178157272781069161
 GameObject:
   m_ObjectHideFlags: 0

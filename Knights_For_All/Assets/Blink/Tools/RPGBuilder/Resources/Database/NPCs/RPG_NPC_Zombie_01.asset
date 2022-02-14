@@ -79,19 +79,7 @@ MonoBehaviour:
     baseValue: 5
     bonusPerLevel: 2
     vitalityActions: []
-  lootTables:
-  - lootTableID: 7
-    lootTableREF: {fileID: 11400000, guid: 4148af8d314798e428fee3dbe159039a, type: 2}
-    dropRate: 100
-  - lootTableID: 13
-    lootTableREF: {fileID: 11400000, guid: 8595db903d55d99468e82a1775f85ea8, type: 2}
-    dropRate: 100
-  - lootTableID: 9
-    lootTableREF: {fileID: 11400000, guid: 2626dbe33b828eb4bb56f766163845f1, type: 2}
-    dropRate: 100
-  - lootTableID: 14
-    lootTableREF: {fileID: 11400000, guid: 73a861ae1e9593c4a9adfa6e8dab4bb0, type: 2}
-    dropRate: 60
+  lootTables: []
   isCombatEnabled: 1
   isMovementEnabled: 1
   isCollisionEnabled: 1
