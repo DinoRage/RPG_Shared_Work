@@ -42,8 +42,8 @@ MonoBehaviour:
   - ENCHANTMENT
   - GEM
   weaponTypeList:
-  - GREATAXE
-  - AXE
+  - GREATSWORD
+  - SWORD
   - BOW
   - STAFF
   - PICKAXE
@@ -70,25 +70,19 @@ MonoBehaviour:
   - Small Gem
   - Big Gem
   weaponAnimatorOverrides:
-  - weaponType1: GREATAXE
+  - weaponType1: GREATSWORD
     weaponType2: 
     requireWeapon2: 0
-    restAnimatorOverride: {fileID: 22100000, guid: edb474817a7ad7f48bc68aeec4eb0eba,
-      type: 2}
-    combatAnimatorOverride: {fileID: 22100000, guid: 623e7a958241861428113b7fa4ed9cd8,
-      type: 2}
+    restAnimatorOverride: {fileID: 22100000, guid: c5cac23a4adc14440884b5a328602fa6, type: 2}
+    combatAnimatorOverride: {fileID: 22100000, guid: c5cac23a4adc14440884b5a328602fa6, type: 2}
   - weaponType1: BOW
     weaponType2: 
     requireWeapon2: 0
-    restAnimatorOverride: {fileID: 22100000, guid: f631ca13f687e1a419f8f1b8d4b75a37,
-      type: 2}
-    combatAnimatorOverride: {fileID: 22100000, guid: e8fb36a14ff423747a85235465af1e14,
-      type: 2}
+    restAnimatorOverride: {fileID: 22100000, guid: f631ca13f687e1a419f8f1b8d4b75a37, type: 2}
+    combatAnimatorOverride: {fileID: 22100000, guid: e8fb36a14ff423747a85235465af1e14, type: 2}
   - weaponType1: STAFF
     weaponType2: 
     requireWeapon2: 0
-    restAnimatorOverride: {fileID: 22100000, guid: 32b87ce87ea9e3a42beb252908517b14,
-      type: 2}
-    combatAnimatorOverride: {fileID: 22100000, guid: 5f467c9ff0680b4479ef91c226675846,
-      type: 2}
+    restAnimatorOverride: {fileID: 22100000, guid: 32b87ce87ea9e3a42beb252908517b14, type: 2}
+    combatAnimatorOverride: {fileID: 22100000, guid: 5f467c9ff0680b4479ef91c226675846, type: 2}
   InventorySlots: 50

@@ -37,8 +37,6 @@ MonoBehaviour:
     weaponTemplateREF: {fileID: 11400000, guid: e36ee3951d73e1648b61cb9ef4c3cb01, type: 2}
   - weaponTemplateID: 2
     weaponTemplateREF: {fileID: 11400000, guid: f54c7f76ad6223548a628f947557cec3, type: 2}
-  - weaponTemplateID: 1
-    weaponTemplateREF: {fileID: 11400000, guid: 7accf06b502d08d4793be3ec3e5817b0, type: 2}
   stats: []
   startItems: []
   actionAbilities:

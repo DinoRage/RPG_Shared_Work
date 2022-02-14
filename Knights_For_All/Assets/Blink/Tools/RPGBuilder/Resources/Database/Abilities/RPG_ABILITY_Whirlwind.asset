@@ -26,24 +26,15 @@ MonoBehaviour:
     castTime: 0.3
     castInRun: 1
     castBarVisible: 0
+    faceCursorWhileCasting: 1
+    faceCursorWhenOnCastStart: 1
+    faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0
     animationTriggered: 0
     comboStarsAfterCastComplete: 0
     cancelStealth: 1
     effectsRequirements: []
-    useRequirements:
-    - requirementType: 1
-      itemRequiredID: -1
-      itemRequiredREF: {fileID: 0}
-      itemRequiredCount: 0
-      consumeItem: 0
-      weaponRequired: GREATAXE
-      useCost: 0
-      statCostID: -1
-      statCostREF: {fileID: 0}
-      costType: 0
-      inCombat: 0
-      stealthed: 0
+    useRequirements: []
     targetType: 2
     HitSettings:
     - alignment: 0
@@ -60,7 +51,7 @@ MonoBehaviour:
     MaxUnitHit: 50
     minRange: 2.5
     maxRange: 0
-    standTimeDuration: 0
+    standTimeDuration: 2.1
     canRotateInStandTime: 0
     castSpeedSlowAmount: 0
     castSpeedSlowTime: 0.3
@@ -88,6 +79,7 @@ MonoBehaviour:
     isProjectileNearbyUnit: 0
     projectileDestroyedByEnvironment: 1
     projectileAffectedByGravity: 0
+    projectileShootOnClickPosition: 0
     mustLookAtTarget: 1
     squareWidth: 0
     squareLength: 0
@@ -120,7 +112,7 @@ MonoBehaviour:
     hitEffectSocketName: 
     hitEffectPositionOffset: {x: 0, y: 0, z: 0}
     hitAttachedToNode: 0
-    channelTime: 3
+    channelTime: 2
     groundLeapDuration: 0
     groundLeapHeight: 0
     groundLeapSpeed: 0
@@ -152,8 +144,7 @@ MonoBehaviour:
     casterEffectsApplied: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 5306170252596951309, guid: 113bb9c78f0486e47825660a832b10c6,
-        type: 3}
+      EffectGO: {fileID: 5306170252596951309, guid: 113bb9c78f0486e47825660a832b10c6, type: 3}
       SocketName: 
       UseNodeSocket: 0
       ParentedToCaster: 1
@@ -161,7 +152,7 @@ MonoBehaviour:
       SoundParentedToEffect: 0
       positionOffset: {x: 0, y: 0.5, z: 0}
       effectScale: {x: 1, y: 1, z: 1}
-      duration: 3.15
+      duration: 2.3
       delay: 0
       isDestroyedOnDeath: 1
       isDestroyedOnStun: 1
@@ -174,7 +165,7 @@ MonoBehaviour:
       intValue: 0
       floatValue: 0
       boolValue: 1
-      duration: 2.9
+      duration: 2.1
       delay: 0
       showWeapons: 1
       showWeaponDuration: 3

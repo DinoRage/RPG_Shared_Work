@@ -29,7 +29,7 @@ MonoBehaviour:
   questGiven: []
   questCompleted: []
   AggroRange: 15
-  distanceFromTarget: 2.75
+  distanceFromTarget: 1
   distanceFromOwner: 3
   DistanceToTargetReset: 40
   RoamRange: 25
@@ -48,15 +48,15 @@ MonoBehaviour:
   MaxLevel: 0
   isScalingWithPlayer: 0
   abilities:
-  - abilityID: 11
-    abilityREF: {fileID: 11400000, guid: 4ce4320c1c581af49b63a1bea52de970, type: 2}
+  - abilityID: 46
+    abilityREF: {fileID: 11400000, guid: d8a32017de0354f4785c83f4a54e612f, type: 2}
     condition: 0
   stats:
   - statID: 1
     statREF: {fileID: 11400000, guid: a4a45b123a3d02c47ab962f484a810c9, type: 2}
     minValue: 0
     maxValue: 0
-    baseValue: 5
+    baseValue: 3.5
     bonusPerLevel: 0
     vitalityActions: []
   - statID: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
     dropRate: 60
   isCombatEnabled: 1
   isMovementEnabled: 1
-  isCollisionEnabled: 0
+  isCollisionEnabled: 1
   isTargetable: 1
   isNameplateEnabled: 1
   isPlayerInteractable: 1
