@@ -51,7 +51,7 @@ MonoBehaviour:
     MaxUnitHit: 50
     minRange: 2.5
     maxRange: 0
-    standTimeDuration: 2.1
+    standTimeDuration: 0
     canRotateInStandTime: 0
     castSpeedSlowAmount: 0
     castSpeedSlowTime: 0.3
@@ -161,7 +161,7 @@ MonoBehaviour:
     visualAnimations:
     - activationType: 0
       parameterType: 0
-      animationParameter: Spinning
+      animationParameter: Spinning_Old
       intValue: 0
       floatValue: 0
       boolValue: 1
