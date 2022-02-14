@@ -9508,7 +9508,7 @@ MonoBehaviour:
   maxGroundRaycastDistance: 100
   minimumPathDistance: 0.5
   samplePositionDistanceMax: 5
-  moveKey: 324
+  moveKey: 323
   standKey: 306
   camRotateKeyLeft: 276
   camRotateKeyRight: 275
