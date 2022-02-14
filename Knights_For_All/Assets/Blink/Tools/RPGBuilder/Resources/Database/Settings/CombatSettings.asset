@@ -49,7 +49,7 @@ MonoBehaviour:
   GCDDuration: 0.5
   talentTreesNodePerTierCount: 5
   outOfCombatDuration: 10
-  useClasses: 0
+  useClasses: 1
   targetPlayerOnClick: 0
   useAutomaticCombatState: 0
   pointREF: {fileID: 0}

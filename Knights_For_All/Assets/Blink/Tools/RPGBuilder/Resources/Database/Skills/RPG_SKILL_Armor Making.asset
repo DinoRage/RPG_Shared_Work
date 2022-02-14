@@ -18,7 +18,7 @@ MonoBehaviour:
   displayName: Armor Making
   description: 
   icon: {fileID: 21300000, guid: d5b7f84b251e75941a89ab25f3cbbe94, type: 3}
-  automaticlyAdded: 1
+  automaticlyAdded: 0
   MaxLevel: 0
   levelTemplateID: 0
   levelTemplateREF: {fileID: 11400000, guid: 6ffc66a9e236d4941a4381ac6b54ee54, type: 2}

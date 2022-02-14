@@ -18,7 +18,7 @@ MonoBehaviour:
   _fileName: RPG_TALENT_TREE_Fighter
   icon: {fileID: 21300000, guid: 8ddcb7061e671dc4a823b55a22aa54c8, type: 3}
   TiersAmount: 10
-  treePointAcceptedID: 0
+  treePointAcceptedID: 4
   treePointAcceptedREF: {fileID: 0}
   nodeList:
   - nodeType: 0

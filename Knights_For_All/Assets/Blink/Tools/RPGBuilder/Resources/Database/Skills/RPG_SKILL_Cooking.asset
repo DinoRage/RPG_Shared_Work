@@ -18,7 +18,7 @@ MonoBehaviour:
   displayName: Cooking
   description: 
   icon: {fileID: 21300000, guid: c38bbfcb13491394b91611da4cae13c9, type: 3}
-  automaticlyAdded: 1
+  automaticlyAdded: 0
   MaxLevel: 0
   levelTemplateID: 0
   levelTemplateREF: {fileID: 11400000, guid: 6ffc66a9e236d4941a4381ac6b54ee54, type: 2}

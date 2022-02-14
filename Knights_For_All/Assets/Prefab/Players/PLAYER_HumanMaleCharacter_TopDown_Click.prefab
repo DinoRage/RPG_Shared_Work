@@ -9489,10 +9489,10 @@ MonoBehaviour:
   cameraEnabled: 1
   initCameraOnSpawn: 1
   cameraName: Main Camera
-  cameraPositionOffset: {x: 0, y: 10, z: -0.5}
+  cameraPositionOffset: {x: 0, y: 14, z: 1}
   cameraRotationOffset: {x: 55, y: 0, z: 0}
-  minCameraHeight: 4
-  maxCameraHeight: 15
+  minCameraHeight: 14
+  maxCameraHeight: 14
   minCameraVertical: -0.5
   maxCameraVertical: -0.5
   cameraZoomSpeed: 15
@@ -14125,7 +14125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8971877233266248318
 Transform:
   m_ObjectHideFlags: 0

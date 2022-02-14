@@ -18,7 +18,7 @@ MonoBehaviour:
   displayName: Alchemy
   description: 
   icon: {fileID: 21300000, guid: cb1963104c1930f4d92f5726f2e04556, type: 3}
-  automaticlyAdded: 1
+  automaticlyAdded: 0
   MaxLevel: 0
   levelTemplateID: 0
   levelTemplateREF: {fileID: 0}

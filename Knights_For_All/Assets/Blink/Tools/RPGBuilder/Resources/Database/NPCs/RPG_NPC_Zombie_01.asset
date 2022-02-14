@@ -51,6 +51,12 @@ MonoBehaviour:
   - abilityID: 46
     abilityREF: {fileID: 11400000, guid: d8a32017de0354f4785c83f4a54e612f, type: 2}
     condition: 0
+  - abilityID: 47
+    abilityREF: {fileID: 11400000, guid: b8f763fc8d9881443af207187390b3f0, type: 2}
+    condition: 0
+  - abilityID: 48
+    abilityREF: {fileID: 11400000, guid: 1445b5d39c6465b4b8387af7e3a6d4b3, type: 2}
+    condition: 0
   stats:
   - statID: 1
     statREF: {fileID: 11400000, guid: a4a45b123a3d02c47ab962f484a810c9, type: 2}

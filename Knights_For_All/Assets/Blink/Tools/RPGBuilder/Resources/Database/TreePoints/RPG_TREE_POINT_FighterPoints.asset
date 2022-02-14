@@ -33,5 +33,4 @@ MonoBehaviour:
     npcRequiredID: -1
     npcRequiredREF: {fileID: 0}
     weaponTemplateRequiredID: 0
-    weaponTemplateREF: {fileID: 11400000, guid: e36ee3951d73e1648b61cb9ef4c3cb01,
-      type: 2}
+    weaponTemplateREF: {fileID: 11400000, guid: e36ee3951d73e1648b61cb9ef4c3cb01, type: 2}

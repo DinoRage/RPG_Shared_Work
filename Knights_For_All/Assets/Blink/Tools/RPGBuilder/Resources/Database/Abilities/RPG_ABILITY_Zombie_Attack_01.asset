@@ -132,7 +132,7 @@ MonoBehaviour:
     groundLeapDuration: 0
     groundLeapHeight: 0
     groundLeapSpeed: 0
-    cooldown: 1.5
+    cooldown: 3.5
     isGCD: 0
     startCDOnActivate: 1
     CanUseDuringGCD: 0
