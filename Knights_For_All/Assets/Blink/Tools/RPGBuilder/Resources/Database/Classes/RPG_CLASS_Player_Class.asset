@@ -20,7 +20,25 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 358874d70119c964b807d6916008d56f, type: 3}
   autoAttackAbilityID: -1
   autoAttackAbilityREF: {fileID: 0}
-  stats: []
+  stats:
+  - _name: 
+    statID: 20
+    statREF: {fileID: 11400000, guid: 2a10d70110a086c47b237d0ab51f1b34, type: 2}
+    amount: 1
+    isPercent: 0
+    bonusPerLevel: 1
+  - _name: 
+    statID: 0
+    statREF: {fileID: 11400000, guid: 3ba412ea703bc2f4697ddcf06f7f13ec, type: 2}
+    amount: 10
+    isPercent: 0
+    bonusPerLevel: 10
+  - _name: 
+    statID: 27
+    statREF: {fileID: 11400000, guid: f9c5113a3b312764c9127b41a82d9bb3, type: 2}
+    amount: 1
+    isPercent: 0
+    bonusPerLevel: 1
   levelTemplateID: 0
   levelTemplateREF: {fileID: 0}
   talentTrees:

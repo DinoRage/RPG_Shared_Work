@@ -55,6 +55,8 @@ namespace BLINK.RPGBuilder.Managers
 
         public void Show()
         {
+            
+
             CharacterNameText.text = CharacterData.Instance.CharacterName;
             classTalentTreeButtonGO.SetActive(RPGBuilderEssentials.Instance.combatSettings.useClasses);
             showing = true;
@@ -66,6 +68,9 @@ namespace BLINK.RPGBuilder.Managers
             WeaponTemplatesDisplayManager.Instance.Hide();
             CustomInputManager.Instance.AddOpenedPanel(thisCG);
             if(CombatManager.playerCombatNode!=null) CombatManager.playerCombatNode.playerControllerEssentials.GameUIPanelAction(showing);
+            // i added
+            InitCharacterCategory("talents");
+
         }
 
         public void Hide()

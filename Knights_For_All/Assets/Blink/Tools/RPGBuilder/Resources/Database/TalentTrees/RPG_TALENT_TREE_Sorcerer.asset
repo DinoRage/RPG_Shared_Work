@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   _name: Sorcerer
-  displayName: Talents
+  displayName: Sorcerer
   _fileName: RPG_TALENT_TREE_Sorcerer
   icon: {fileID: 21300000, guid: 2eae584cda6024142abd2e496f6fb191, type: 3}
   TiersAmount: 10
