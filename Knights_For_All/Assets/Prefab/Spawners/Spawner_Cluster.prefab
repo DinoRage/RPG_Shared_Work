@@ -1,0 +1,910 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6185740510520663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9003451248299002249}
+  - component: {fileID: 1161301226493636057}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &9003451248299002249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185740510520663}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5865942169447051515}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1161301226493636057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185740510520663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerType: 0
+  spawnCount: 0
+  spawnData:
+  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
+    spawnChance: 25
+  npcCountMax: 15
+  curNPCs: []
+  spawnerGizmoMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
+  areaRadius: 60
+  areaHeight: 100
+  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  usePosition: 0
+--- !u!1 &138773667972459833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1548469169133033648}
+  - component: {fileID: 4213686402446533606}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1548469169133033648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138773667972459833}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7212154790100701167}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4213686402446533606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138773667972459833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerType: 0
+  spawnCount: 0
+  spawnData:
+  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
+    spawnChance: 25
+  npcCountMax: 15
+  curNPCs: []
+  spawnerGizmoMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
+  areaRadius: 60
+  areaHeight: 100
+  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  usePosition: 0
+--- !u!1 &1644619611395241525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6618060724658998238}
+  - component: {fileID: 4897659272124864125}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6618060724658998238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644619611395241525}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8570027064444608541}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4897659272124864125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644619611395241525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerType: 0
+  spawnCount: 0
+  spawnData:
+  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
+    spawnChance: 25
+  npcCountMax: 15
+  curNPCs: []
+  spawnerGizmoMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
+  areaRadius: 60
+  areaHeight: 100
+  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  usePosition: 0
+--- !u!1 &1812310208359250059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812310208359250056}
+  - component: {fileID: 1812310208359250063}
+  m_Layer: 0
+  m_Name: Spawner_Cluster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1812310208359250056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812310208359250059}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 50.4, y: -25.6, z: -604}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1915187846540234914}
+  - {fileID: 5865942169447051515}
+  - {fileID: 7212154790100701167}
+  - {fileID: 8570027064444608541}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1812310208359250063
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812310208359250059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 220
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4872386533007897959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8570027064444608541}
+  - component: {fileID: 4113390673239885646}
+  - component: {fileID: 928035720520349339}
+  - component: {fileID: 3486978606276475364}
+  - component: {fileID: 5388510922967087119}
+  m_Layer: 0
+  m_Name: Cluster_01 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8570027064444608541
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872386533007897959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -100, y: 0, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6618060724658998238}
+  m_Father: {fileID: 1812310208359250056}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4113390673239885646
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872386533007897959}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &928035720520349339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872386533007897959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner_maximum: 15
+--- !u!114 &3486978606276475364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872386533007897959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clusterGroups:
+  - clusterGroupName: New Cluster Group
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 928035720520349339}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Enable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+        exitEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 928035720520349339}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Dissable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+--- !u!114 &5388510922967087119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4872386533007897959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 3486978606276475364}
+  clusterGroupIndex: 0
+--- !u!1 &7134371032674064847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7212154790100701167}
+  - component: {fileID: 1865278812415589984}
+  - component: {fileID: 3212213751918595049}
+  - component: {fileID: 7367696239293974248}
+  - component: {fileID: 2925745481462805562}
+  m_Layer: 0
+  m_Name: Cluster_01 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7212154790100701167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134371032674064847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100, y: 0, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1548469169133033648}
+  m_Father: {fileID: 1812310208359250056}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1865278812415589984
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134371032674064847}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3212213751918595049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134371032674064847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner_maximum: 15
+--- !u!114 &7367696239293974248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134371032674064847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clusterGroups:
+  - clusterGroupName: New Cluster Group
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 3212213751918595049}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Enable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+        exitEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 3212213751918595049}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Dissable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+--- !u!114 &2925745481462805562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7134371032674064847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 7367696239293974248}
+  clusterGroupIndex: 0
+--- !u!1 &7732536764137960442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915187846540234914}
+  - component: {fileID: 1701080507425970719}
+  - component: {fileID: 5273905135003045187}
+  - component: {fileID: 7655509082334546953}
+  - component: {fileID: 8054980611712655263}
+  m_Layer: 0
+  m_Name: Cluster_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915187846540234914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732536764137960442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 100, y: 0, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8063120772383025563}
+  m_Father: {fileID: 1812310208359250056}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1701080507425970719
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732536764137960442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5273905135003045187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732536764137960442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner_maximum: 15
+--- !u!114 &7655509082334546953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732536764137960442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clusterGroups:
+  - clusterGroupName: New Cluster Group
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 5273905135003045187}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Enable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+        exitEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 5273905135003045187}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Dissable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+--- !u!114 &8054980611712655263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7732536764137960442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 7655509082334546953}
+  clusterGroupIndex: 0
+--- !u!1 &8454460576550813246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8063120772383025563}
+  - component: {fileID: 2111417826256975306}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8063120772383025563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454460576550813246}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1915187846540234914}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2111417826256975306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8454460576550813246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerType: 0
+  spawnCount: 0
+  spawnData:
+  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
+    spawnChance: 25
+  npcCountMax: 15
+  curNPCs: []
+  spawnerGizmoMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
+  areaRadius: 60
+  areaHeight: 100
+  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  usePosition: 0
+--- !u!1 &8590134230876529341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5865942169447051515}
+  - component: {fileID: 4026092637552023008}
+  - component: {fileID: 2880459753084807438}
+  - component: {fileID: 2276216131494714629}
+  - component: {fileID: 1280023114614120594}
+  m_Layer: 0
+  m_Name: Cluster_01 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5865942169447051515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590134230876529341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -100, y: 0, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9003451248299002249}
+  m_Father: {fileID: 1812310208359250056}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4026092637552023008
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590134230876529341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2880459753084807438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590134230876529341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner_maximum: 15
+--- !u!114 &2276216131494714629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590134230876529341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clusterGroups:
+  - clusterGroupName: New Cluster Group
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 2880459753084807438}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Enable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+        exitEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 2880459753084807438}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Dissable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+--- !u!114 &1280023114614120594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8590134230876529341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 2276216131494714629}
+  clusterGroupIndex: 0
