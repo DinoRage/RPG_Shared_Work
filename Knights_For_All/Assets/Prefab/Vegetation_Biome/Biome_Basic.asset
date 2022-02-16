@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1187c6f5a2aa584084ba67ab2162dbf, type: 3}
-  m_Name: Biome_01
+  m_Name: Biome_Basic
   m_EditorClassIdentifier: 
   PackageName: No name
   VegetationInfoList:
@@ -25,7 +25,7 @@ MonoBehaviour:
     VegetationTexture: {fileID: 0}
     VegetationGuid: cd18cfb16ddc57e4784ad9f03c155cea
     SampleDistance: 9.516624
-    Density: 0.056
+    Density: 0.009
     RandomizePosition: 1
     UseVegetationMasksOnStorage: 0
     UseSamplePointOffset: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
     VegetationTexture: {fileID: 0}
     VegetationGuid: 33ecd0ef342d8ee4188c82a8b5761ab5
     SampleDistance: 4.0581713
-    Density: 0.098
+    Density: 0.02
     RandomizePosition: 1
     UseVegetationMasksOnStorage: 0
     UseSamplePointOffset: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
     VegetationTexture: {fileID: 0}
     VegetationGuid: 3093ea523ac57e34cb17a006b681ef37
     SampleDistance: 4.283851
-    Density: 0.064
+    Density: 0.012
     RandomizePosition: 1
     UseVegetationMasksOnStorage: 0
     UseSamplePointOffset: 0
@@ -3574,7 +3574,7 @@ MonoBehaviour:
     VegetationTexture: {fileID: 0}
     VegetationGuid: bb5ef018996d1c842a3fda7ef67595e9
     SampleDistance: 7.265564
-    Density: 0.014
+    Density: 0.009
     RandomizePosition: 1
     UseVegetationMasksOnStorage: 0
     UseSamplePointOffset: 0
@@ -3796,7 +3796,7 @@ MonoBehaviour:
     VegetationTexture: {fileID: 0}
     VegetationGuid: 10b4c149ea70f1347a52ea09807bfb56
     SampleDistance: 7.890314
-    Density: 0.018
+    Density: 0.008
     RandomizePosition: 1
     UseVegetationMasksOnStorage: 0
     UseSamplePointOffset: 0

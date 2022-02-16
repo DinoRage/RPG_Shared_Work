@@ -95,14 +95,14 @@ MonoBehaviour:
   animatorUseRootMotion: 0
   animatorUpdateMode: 0
   AnimatorCullingMode: 0
-  navmeshAgentRadius: 0.55
+  navmeshAgentRadius: 0.5
   navmeshAgentHeight: 2
   navmeshAgentAngularSpeed: 1000
   navmeshObstacleAvoidance: 3
   colliderType: 0
   colliderCenter: {x: 0, y: 1, z: 0}
   colliderSize: {x: 0, y: 0, z: 0}
-  colliderRadius: 0.6
+  colliderRadius: 0.45
   colliderHeight: 1
   aggroLinks:
   - npcID: 4
