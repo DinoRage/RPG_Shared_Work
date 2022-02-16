@@ -62,7 +62,7 @@ MonoBehaviour:
     statREF: {fileID: 11400000, guid: a4a45b123a3d02c47ab962f484a810c9, type: 2}
     minValue: 0
     maxValue: 0
-    baseValue: 3.5
+    baseValue: 5.5
     bonusPerLevel: 0
     vitalityActions: []
   - statID: 0
