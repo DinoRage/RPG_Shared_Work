@@ -72,7 +72,6 @@ MonoBehaviour:
     petSPawnCount: 0
     petScaleWithCharacter: 0
     knockbackDistance: 0
-    knockbackSpeed: 0
     motionDistance: 5
     motionSpeed: 0.5
     motionDirection: {x: 0, y: 0, z: 0}
@@ -113,13 +112,13 @@ MonoBehaviour:
     shapeshiftingAnimatorUpdateMode: 0
     shapeshiftingAnimatorCullingMode: 0
     shapeshiftingOverrideMainActionBar: 0
+    canCameraAim: 0
     shapeshiftingActiveAbilities: 
     showStealthActionBar: 1
     nestedEffects: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 6343420572359166898, guid: ea5e7c9886e458a4391d05e90459dbd8,
-        type: 3}
+      EffectGO: {fileID: 6343420572359166898, guid: ea5e7c9886e458a4391d05e90459dbd8, type: 3}
       SocketName: 
       UseNodeSocket: 0
       ParentedToCaster: 1

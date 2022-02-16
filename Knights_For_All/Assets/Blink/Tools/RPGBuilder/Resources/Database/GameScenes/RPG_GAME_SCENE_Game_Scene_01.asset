@@ -15,8 +15,8 @@ MonoBehaviour:
   ID: 1
   _name: Game_Scene_01
   _fileName: RPG_GAME_SCENE_Game_Scene_01
-  displayName: Game_Scene_01
-  description: The DEMO Scene of RPG Builder, to help you learn while playing.
+  displayName: The Dead Beach
+  description: 
   loadingBG: {fileID: 21300000, guid: c71505cc9ead67942bbeb7fdc5769f78, type: 3}
   minimapImage: {fileID: 21300000, guid: a297f02e483b1444db4b8b2c40756e2d, type: 3}
   mapBounds:

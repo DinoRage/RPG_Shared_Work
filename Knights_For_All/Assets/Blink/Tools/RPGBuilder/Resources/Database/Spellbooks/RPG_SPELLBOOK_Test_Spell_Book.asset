@@ -61,4 +61,11 @@ MonoBehaviour:
     bonusID: -1
     bonusREF: {fileID: 0}
     unlockLevel: 1
+  - nodeType: 0
+    _name: 
+    abilityID: 49
+    abilityREF: {fileID: 11400000, guid: b07e4f4c730a56d44850768b072287b3, type: 2}
+    bonusID: -1
+    bonusREF: {fileID: 0}
+    unlockLevel: 1
   sourceType: 0
