@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 943d49eb769cd944fade3a1cd7491609, type: 3}
-  m_Name: RPG_ABILITY_Pyroblast
+  m_Name: RPG_ABILITY_Player_Pyroblast
   m_EditorClassIdentifier: 
   ID: 25
-  _name: Pyroblast
-  _fileName: RPG_ABILITY_Pyroblast
-  displayName: Pyroblast
+  _name: Player_Pyroblast
+  _fileName: RPG_ABILITY_Player_Pyroblast
+  displayName: Player_Pyroblast
   icon: {fileID: 21300000, guid: 12c28f7828b9dac429b215fda81958ad, type: 3}
   learnedByDefault: 0
   abilityType: 0
@@ -26,6 +26,9 @@ MonoBehaviour:
     castTime: 0.8
     castInRun: 0
     castBarVisible: 1
+    faceCursorWhileCasting: 1
+    faceCursorWhenOnCastStart: 1
+    faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0
     animationTriggered: 0
     comboStarsAfterCastComplete: 0
@@ -88,6 +91,7 @@ MonoBehaviour:
     isProjectileNearbyUnit: 0
     projectileDestroyedByEnvironment: 1
     projectileAffectedByGravity: 0
+    projectileShootOnClickPosition: 0
     mustLookAtTarget: 1
     squareWidth: 0
     squareLength: 0
@@ -97,8 +101,7 @@ MonoBehaviour:
     groundHitTime: 0
     groundHitCount: 1
     groundHitInterval: 0
-    projectileEffect: {fileID: 1333894652247440584, guid: 418722bb539061049ae85f027794e8a0,
-      type: 3}
+    projectileEffect: {fileID: 1333894652247440584, guid: 418722bb539061049ae85f027794e8a0, type: 3}
     projectileSocketName: Projectile1
     projectileTargetSocketName: 
     projectileUseNodeSocket: 0
@@ -116,8 +119,7 @@ MonoBehaviour:
     effectPositionOffset: {x: 0, y: 1.25, z: 0}
     groundVisualEffectDuration: 5
     hitEffectUseSocket: 0
-    hitEffect: {fileID: 7711296200780567269, guid: bba9cb995ff67a04c8826ab993a74935,
-      type: 3}
+    hitEffect: {fileID: 7711296200780567269, guid: bba9cb995ff67a04c8826ab993a74935, type: 3}
     hitEffectDuration: 3
     hitEffectSocketName: ProjectileHit
     hitEffectPositionOffset: {x: 0, y: 0.5, z: 0}
@@ -154,8 +156,7 @@ MonoBehaviour:
     casterEffectsApplied: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5,
-        type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5, type: 3}
       SocketName: Projectile1
       UseNodeSocket: 1
       ParentedToCaster: 1
@@ -170,8 +171,7 @@ MonoBehaviour:
       isDestroyedOnStealth: 0
       isDestroyedOnStealthEnd: 0
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5,
-        type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5, type: 3}
       SocketName: Projectile2
       UseNodeSocket: 1
       ParentedToCaster: 1

@@ -23,10 +23,10 @@ MonoBehaviour:
   - ShowedInEditor: 1
     unlockCost: 0
     activationType: 1
-    castTime: 0.8
+    castTime: 0.55
     castInRun: 1
     castBarVisible: 1
-    faceCursorWhileCasting: 1
+    faceCursorWhileCasting: 0
     faceCursorWhenOnCastStart: 1
     faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0

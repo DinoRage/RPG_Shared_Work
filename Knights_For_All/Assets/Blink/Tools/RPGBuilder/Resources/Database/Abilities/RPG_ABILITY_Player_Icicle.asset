@@ -22,11 +22,11 @@ MonoBehaviour:
   ranks:
   - ShowedInEditor: 1
     unlockCost: 1
-    activationType: 0
-    castTime: 0.8
+    activationType: 1
+    castTime: 0.85
     castInRun: 1
     castBarVisible: 1
-    faceCursorWhileCasting: 1
+    faceCursorWhileCasting: 0
     faceCursorWhenOnCastStart: 1
     faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0
@@ -102,9 +102,9 @@ MonoBehaviour:
     groundHitCount: 1
     groundHitInterval: 0
     projectileEffect: {fileID: 3069674416539443529, guid: 192062bd2f5e97a4dab526858c497199, type: 3}
-    projectileSocketName: Projectile1
+    projectileSocketName: Projectile2
     projectileTargetSocketName: 
-    projectileUseNodeSocket: 0
+    projectileUseNodeSocket: 1
     projectileTargetUseNodeSocket: 0
     projectileParentedToCaster: 0
     projectileSound: {fileID: 0}

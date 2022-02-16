@@ -630,7 +630,7 @@ MonoBehaviour:
     Active: 1
     DisableEdge: 0
   - Selected: 0
-    Position: {x: -114.88796, y: -5.805188, z: -721.6982}
+    Position: {x: -114.88784, y: -5.8052034, z: -721.6982}
     OverrideWidth: 0
     CustomWidth: 2
     Active: 1
@@ -776,7 +776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442540783}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 214.84375, y: 0, z: -1324.0234}
+  m_LocalPosition: {x: 22.851562, y: 0, z: -917.48047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1595555702}
@@ -2014,8 +2014,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845924440}
-  m_LocalRotation: {x: 0.3601934, y: -0.07348905, z: 0.029339684, w: 0.92951566}
-  m_LocalPosition: {x: 214.9008, y: 1022.3056, z: -1324.1168}
+  m_LocalRotation: {x: -0.1231825, y: 0.3533117, z: -0.0484536, w: -0.9260935}
+  m_LocalPosition: {x: 22.934155, y: 55.325043, z: -917.49243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 474367811}

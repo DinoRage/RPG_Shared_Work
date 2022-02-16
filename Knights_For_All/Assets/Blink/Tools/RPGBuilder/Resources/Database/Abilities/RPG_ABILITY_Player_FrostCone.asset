@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 943d49eb769cd944fade3a1cd7491609, type: 3}
-  m_Name: RPG_ABILITY_FrostCone
+  m_Name: RPG_ABILITY_Player_FrostCone
   m_EditorClassIdentifier: 
   ID: 27
-  _name: FrostCone
-  _fileName: RPG_ABILITY_FrostCone
-  displayName: Frost Cone
+  _name: Player_FrostCone
+  _fileName: RPG_ABILITY_Player_FrostCone
+  displayName: Player_Frost Cone
   icon: {fileID: 21300000, guid: b53c821b24f1f194eb8ad240cee74239, type: 3}
   learnedByDefault: 0
   abilityType: 0
@@ -26,6 +26,9 @@ MonoBehaviour:
     castTime: 0.45
     castInRun: 1
     castBarVisible: 1
+    faceCursorWhileCasting: 1
+    faceCursorWhenOnCastStart: 1
+    faceCursorWhenOnCastEnd: 1
     canBeUsedStunned: 0
     animationTriggered: 0
     comboStarsAfterCastComplete: 0
@@ -88,6 +91,7 @@ MonoBehaviour:
     isProjectileNearbyUnit: 0
     projectileDestroyedByEnvironment: 1
     projectileAffectedByGravity: 0
+    projectileShootOnClickPosition: 0
     mustLookAtTarget: 1
     squareWidth: 0
     squareLength: 0
@@ -124,7 +128,7 @@ MonoBehaviour:
     groundLeapDuration: 0
     groundLeapHeight: 0
     groundLeapSpeed: 0
-    cooldown: 18
+    cooldown: 2
     isGCD: 1
     startCDOnActivate: 1
     CanUseDuringGCD: 0
@@ -143,8 +147,7 @@ MonoBehaviour:
     casterEffectsApplied: []
     visualEffects:
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be,
-        type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be, type: 3}
       SocketName: Projectile1
       UseNodeSocket: 1
       ParentedToCaster: 1
@@ -159,8 +162,7 @@ MonoBehaviour:
       isDestroyedOnStealth: 0
       isDestroyedOnStealthEnd: 0
     - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be,
-        type: 3}
+      EffectGO: {fileID: 8471278187970414767, guid: e9c728b6c65ba954ba96db54891002be, type: 3}
       SocketName: Projectile2
       UseNodeSocket: 1
       ParentedToCaster: 1
@@ -175,8 +177,7 @@ MonoBehaviour:
       isDestroyedOnStealth: 0
       isDestroyedOnStealthEnd: 0
     - activationType: 1
-      EffectGO: {fileID: 1376591398944169521, guid: daf0864a0bb5de149bccedfcf2beba53,
-        type: 3}
+      EffectGO: {fileID: 1376591398944169521, guid: daf0864a0bb5de149bccedfcf2beba53, type: 3}
       SocketName: Projectile1
       UseNodeSocket: 0
       ParentedToCaster: 0
