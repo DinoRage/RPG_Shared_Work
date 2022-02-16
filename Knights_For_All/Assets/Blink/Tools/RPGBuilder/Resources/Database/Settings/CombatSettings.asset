@@ -45,6 +45,7 @@ MonoBehaviour:
   - Projectile1
   - Projectile2
   - ProjectileHit
+  - Sword_Pojectile
   CriticalDamageBonus: 250
   GCDDuration: 0.5
   talentTreesNodePerTierCount: 5

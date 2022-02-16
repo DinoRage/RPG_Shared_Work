@@ -23,7 +23,7 @@ MonoBehaviour:
   - ShowedInEditor: 1
     unlockCost: 0
     activationType: 1
-    castTime: 0.8
+    castTime: 0.4
     castInRun: 1
     castBarVisible: 1
     faceCursorWhileCasting: 1
@@ -104,7 +104,7 @@ MonoBehaviour:
     projectileEffect: {fileID: 100010, guid: b32f835e658efa1419ad0ae6b033b81f, type: 3}
     projectileSocketName: Projectile1
     projectileTargetSocketName: 
-    projectileUseNodeSocket: 0
+    projectileUseNodeSocket: 1
     projectileTargetUseNodeSocket: 0
     projectileParentedToCaster: 0
     projectileSound: {fileID: 0}
@@ -128,7 +128,7 @@ MonoBehaviour:
     groundLeapDuration: 0
     groundLeapHeight: 0
     groundLeapSpeed: 0
-    cooldown: 1.35
+    cooldown: 1.9
     isGCD: 1
     startCDOnActivate: 1
     CanUseDuringGCD: 0
@@ -164,23 +164,8 @@ MonoBehaviour:
       SoundParentedToEffect: 0
       positionOffset: {x: 0, y: 0, z: 0}
       effectScale: {x: 0.5, y: 0.5, z: 0.5}
-      duration: 5
-      delay: 0
-      isDestroyedOnDeath: 1
-      isDestroyedOnStun: 1
-      isDestroyedOnStealth: 0
-      isDestroyedOnStealthEnd: 0
-    - activationType: 0
-      EffectGO: {fileID: 8471278187970414767, guid: 90bdc1eae59d8b1419b289ec97e5b9a5, type: 3}
-      SocketName: Projectile2
-      UseNodeSocket: 1
-      ParentedToCaster: 1
-      Sound: {fileID: 0}
-      SoundParentedToEffect: 0
-      positionOffset: {x: 0, y: 0, z: 0}
-      effectScale: {x: 0.5, y: 0.5, z: 0.5}
-      duration: 5
-      delay: 0
+      duration: 0.25
+      delay: 0.2
       isDestroyedOnDeath: 1
       isDestroyedOnStun: 1
       isDestroyedOnStealth: 0
@@ -194,7 +179,7 @@ MonoBehaviour:
       boolValue: 0
       duration: 1
       delay: 0
-      showWeapons: 1
+      showWeapons: 0
       showWeaponDuration: 1.25
     tagsData: []
     conditionalEffects: []
