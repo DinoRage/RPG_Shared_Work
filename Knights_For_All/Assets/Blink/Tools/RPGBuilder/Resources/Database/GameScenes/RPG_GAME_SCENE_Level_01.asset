@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd833f50e74631042ae5eac5ab830020, type: 3}
+  m_Name: RPG_GAME_SCENE_Level_01
+  m_EditorClassIdentifier: 
+  ID: 2
+  _name: Level_01
+  _fileName: RPG_GAME_SCENE_Level_01
+  displayName: Level_01
+  description: 
+  loadingBG: {fileID: 21300000, guid: c71505cc9ead67942bbeb7fdc5769f78, type: 3}
+  minimapImage: {fileID: 21300000, guid: a297f02e483b1444db4b8b2c40756e2d, type: 3}
+  mapBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 1024, y: 0, z: 1024}
+  mapSize: {x: 4096, y: 4096}
+  startPositionID: 2
+  startPositionREF: {fileID: 0}
+  isProceduralScene: 0
+  SpawnPointName: 
+  regions: []

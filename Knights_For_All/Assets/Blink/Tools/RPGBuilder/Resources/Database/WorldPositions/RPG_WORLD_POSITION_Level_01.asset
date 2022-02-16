@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe99361b5d1ee9c408a389d435897110, type: 3}
-  m_Name: RPG_WORLD_POSITION_Game_Scene_01
+  m_Name: RPG_WORLD_POSITION_Level_01
   m_EditorClassIdentifier: 
-  ID: 1
-  _name: Game_Scene_01
-  _fileName: RPG_WORLD_POSITION_Game_Scene_01
-  displayName: Game_Scene_01
-  position: {x: -81.82702, y: 4.5, z: -865.4}
+  ID: 2
+  _name: Level_01
+  _fileName: RPG_WORLD_POSITION_Level_01
+  displayName: Level_01
+  position: {x: -466.97064, y: 8.49, z: -196.28984}
   useRotation: 1
   rotation: {x: -0, y: 0, z: 0}

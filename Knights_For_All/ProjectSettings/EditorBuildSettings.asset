@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Blink/Tools/RPGBuilder/Scenes/RPGBuilderDemo.unity
     guid: f89f8fdf4492100489d95509b6a7a633
   - enabled: 1
-    path: Assets/Scenes/Game_Scene_01.unity
+    path: Assets/Scenes/Test_Scene.unity
     guid: 576ae4cf218cbcb4f838fbc56503e370
   m_configObjects: {}
