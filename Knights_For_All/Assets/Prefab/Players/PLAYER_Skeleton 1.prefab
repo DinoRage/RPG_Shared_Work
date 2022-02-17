@@ -149,6 +149,36 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   Indicator: {fileID: 6577666618271570282}
+--- !u!1 &2830778672668964432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 736687046255789827}
+  m_Layer: 0
+  m_Name: Projectile_R_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &736687046255789827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2830778672668964432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3805341968381045346}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3481887636866221249
 GameObject:
   m_ObjectHideFlags: 0
@@ -5964,6 +5994,7 @@ Transform:
   - {fileID: 3805169205221152140}
   - {fileID: 3805899011978462588}
   - {fileID: 3805278152473765886}
+  - {fileID: 1052800929536377593}
   m_Father: {fileID: 3805892205208393388}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7651,6 +7682,7 @@ Transform:
   - {fileID: 3805074870264755074}
   - {fileID: 3805197285447883550}
   - {fileID: 3806001893186882648}
+  - {fileID: 736687046255789827}
   m_Father: {fileID: 3805285497690113138}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10892,7 +10924,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3805636836833032350
 Transform:
   m_ObjectHideFlags: 0
@@ -12220,11 +12252,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sockets:
   - socketName: Projectile1
-    socketTransform: {fileID: 7482069658597878186}
+    socketTransform: {fileID: 736687046255789827}
   - socketName: Projectile2
-    socketTransform: {fileID: 3526411251586239054}
+    socketTransform: {fileID: 1052800929536377593}
   - socketName: ProjectileHit
-    socketTransform: {fileID: 8534201845222976905}
+    socketTransform: {fileID: 3806080626710494540}
 --- !u!114 &7712096754523328572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12247,8 +12279,8 @@ MonoBehaviour:
   cachedAnimatorUseRootMotion: 0
   cachedAnimatorUpdateMode: 0
   cachedAnimatorCullingMode: 0
-  cachedBodyParent: {fileID: 8502256222935660775}
-  cachedArmorsParent: {fileID: 8502256222935660775}
+  cachedBodyParent: {fileID: 3802091836134178984}
+  cachedArmorsParent: {fileID: 3802091836134178984}
   armorPieces: []
   OneHandWeapon1CombatSlot: {fileID: 8496228756068220621}
   OneHandWeapon1RestSlot: {fileID: 0}
@@ -12263,8 +12295,8 @@ MonoBehaviour:
   useBodyParts: 0
   HeadTransformSocket: {fileID: 0}
   armatureReferences:
-  - {fileID: 8501920305796557887}
-  armatureParentGO: {fileID: 8502256222935660775}
+  - {fileID: 3802347855445475464}
+  armatureParentGO: {fileID: 3802091836134178984}
   armatureParentOffset: {x: 0, y: 0, z: 0}
   armorRenderers: []
   bodyRenderers: []
@@ -12490,6 +12522,36 @@ MonoBehaviour:
   OnWeaponSwitch:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &7952005029556383419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052800929536377593}
+  m_Layer: 0
+  m_Name: Projectil_L_02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1052800929536377593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7952005029556383419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3805132152156851128}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8434957692560852865
 GameObject:
   m_ObjectHideFlags: 0
