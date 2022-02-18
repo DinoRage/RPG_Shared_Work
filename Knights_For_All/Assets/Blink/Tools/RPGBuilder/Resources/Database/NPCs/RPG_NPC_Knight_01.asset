@@ -48,14 +48,14 @@ MonoBehaviour:
   MaxLevel: 0
   isScalingWithPlayer: 0
   abilities:
-  - abilityID: 46
-    abilityREF: {fileID: 11400000, guid: d8a32017de0354f4785c83f4a54e612f, type: 2}
+  - abilityID: 50
+    abilityREF: {fileID: 11400000, guid: b752021879b70e8489ce6c1096ae53a6, type: 2}
     condition: 0
-  - abilityID: 47
-    abilityREF: {fileID: 11400000, guid: b8f763fc8d9881443af207187390b3f0, type: 2}
+  - abilityID: 51
+    abilityREF: {fileID: 11400000, guid: 165cf9fd6aac71044881fb450bc9e9b6, type: 2}
     condition: 0
-  - abilityID: 48
-    abilityREF: {fileID: 11400000, guid: 1445b5d39c6465b4b8387af7e3a6d4b3, type: 2}
+  - abilityID: 52
+    abilityREF: {fileID: 11400000, guid: dcb91ae3514cb124b9d997adfb79c7bc, type: 2}
     condition: 0
   stats:
   - statID: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
   - statID: 0
     statREF: {fileID: 11400000, guid: 3ba412ea703bc2f4697ddcf06f7f13ec, type: 2}
     minValue: 0
-    maxValue: 300
+    maxValue: 0
     baseValue: 300
     bonusPerLevel: 10
     vitalityActions: []
@@ -78,6 +78,13 @@ MonoBehaviour:
     maxValue: 0
     baseValue: 5
     bonusPerLevel: 2
+    vitalityActions: []
+  - statID: 20
+    statREF: {fileID: 11400000, guid: 2a10d70110a086c47b237d0ab51f1b34, type: 2}
+    minValue: 0
+    maxValue: 0
+    baseValue: 5
+    bonusPerLevel: 1
     vitalityActions: []
   lootTables: []
   isCombatEnabled: 1

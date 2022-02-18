@@ -54,7 +54,7 @@ namespace DinoRage
         }
         public void Manualy_Spawn_NPCs()
         {
-            for (int i = 0; i <= _spawner_maximum; i++)
+            for (int i = _the_spawner.curNPCs.Count; i <= _the_spawner.npcCountMax; i++)
             {
                 _the_spawner.ManualSpawnNPC();
             }

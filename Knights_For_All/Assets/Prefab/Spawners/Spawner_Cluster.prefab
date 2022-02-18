@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6185740510520663
+--- !u!1 &433536801471231571
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,63 +8,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9003451248299002249}
-  - component: {fileID: 1161301226493636057}
+  - component: {fileID: 2841536143090646308}
+  - component: {fileID: 1054260369978614097}
+  - component: {fileID: 6609432992117885639}
   m_Layer: 0
-  m_Name: Spawner (1)
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &9003451248299002249
+  m_IsActive: 1
+--- !u!4 &2841536143090646308
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185740510520663}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 433536801471231571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 5865942169447051515}
-  m_RootOrder: 0
+  m_Father: {fileID: 1915187846540234914}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1161301226493636057
+--- !u!135 &1054260369978614097
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433536801471231571}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6609432992117885639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6185740510520663}
+  m_GameObject: {fileID: 433536801471231571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnerType: 0
-  spawnCount: 0
-  spawnData:
-  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
-    spawnChance: 25
-  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
-    spawnChance: 25
-  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
-    spawnChance: 25
-  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
-    spawnChance: 25
-  npcCountMax: 15
-  curNPCs: []
-  spawnerGizmoMesh: {fileID: 0}
-  areaRadius: 60
-  areaHeight: 100
-  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 512
-  usePosition: 0
---- !u!1 &138773667972459833
+  cluster: {fileID: 7655509082334546953}
+  clusterGroupIndex: 1
+--- !u!1 &448012659832284172
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,8 +67,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1548469169133033648}
-  - component: {fileID: 4213686402446533606}
+  - component: {fileID: 3672900797230250161}
+  - component: {fileID: 715405377669474899}
   m_Layer: 0
   m_Name: Spawner (1)
   m_TagString: Untagged
@@ -81,91 +76,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &1548469169133033648
+--- !u!4 &3672900797230250161
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138773667972459833}
+  m_GameObject: {fileID: 448012659832284172}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7212154790100701167}
+  m_Father: {fileID: 4948463327956059774}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4213686402446533606
+--- !u!114 &715405377669474899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138773667972459833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnerType: 0
-  spawnCount: 0
-  spawnData:
-  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
-    spawnChance: 25
-  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
-    spawnChance: 25
-  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
-    spawnChance: 25
-  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
-    spawnChance: 25
-  npcCountMax: 15
-  curNPCs: []
-  spawnerGizmoMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
-  areaRadius: 60
-  areaHeight: 100
-  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
-  groundLayers:
-    serializedVersion: 2
-    m_Bits: 512
-  usePosition: 0
---- !u!1 &1644619611395241525
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6618060724658998238}
-  - component: {fileID: 4897659272124864125}
-  m_Layer: 0
-  m_Name: Spawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &6618060724658998238
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644619611395241525}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8570027064444608541}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4897659272124864125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644619611395241525}
+  m_GameObject: {fileID: 448012659832284172}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
@@ -192,6 +123,228 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   usePosition: 0
+--- !u!1 &1325927216974055467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5921876091420887612}
+  - component: {fileID: 2799736214684610080}
+  - component: {fileID: 5353795509120366457}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5921876091420887612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325927216974055467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8087392875641113925}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &2799736214684610080
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325927216974055467}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5353795509120366457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325927216974055467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 7395037408746061283}
+  clusterGroupIndex: 1
+--- !u!1 &1355656839081725282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4948463327956059774}
+  - component: {fileID: 3353887464465718991}
+  - component: {fileID: 4566414659891918291}
+  m_Layer: 0
+  m_Name: Cluster_01 (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4948463327956059774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355656839081725282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -100, y: 0, z: -100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 3672900797230250161}
+  - {fileID: 8063812339317961477}
+  - {fileID: 8648824652748420797}
+  m_Father: {fileID: 1812310208359250056}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3353887464465718991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355656839081725282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _spawner_maximum: 17
+--- !u!114 &4566414659891918291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355656839081725282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clusterGroups:
+  - clusterGroupName: Enter
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 3353887464465718991}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Enable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+        exitEvents:
+          m_PersistentCalls:
+            m_Calls: []
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+  - clusterGroupName: Exit
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls: []
+        exitEvents:
+          m_PersistentCalls:
+            m_Calls:
+            - m_Target: {fileID: 3353887464465718991}
+              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
+              m_MethodName: Dissable_Spawner
+              m_Mode: 1
+              m_Arguments:
+                m_ObjectArgument: {fileID: 0}
+                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+                m_IntArgument: 0
+                m_FloatArgument: 0
+                m_StringArgument: 
+                m_BoolArgument: 0
+              m_CallState: 2
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
 --- !u!1 &1812310208359250059
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,9 +374,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1915187846540234914}
-  - {fileID: 5865942169447051515}
-  - {fileID: 7212154790100701167}
-  - {fileID: 8570027064444608541}
+  - {fileID: 7705990919103556418}
+  - {fileID: 8087392875641113925}
+  - {fileID: 4948463327956059774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -240,7 +393,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 220
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &4872386533007897959
+--- !u!1 &3491963223783141594
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,73 +401,183 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8570027064444608541}
-  - component: {fileID: 4113390673239885646}
-  - component: {fileID: 928035720520349339}
-  - component: {fileID: 3486978606276475364}
-  - component: {fileID: 5388510922967087119}
+  - component: {fileID: 446213721386752413}
+  - component: {fileID: 7661740825802867103}
+  - component: {fileID: 8575938510372950191}
   m_Layer: 0
-  m_Name: Cluster_01 (3)
+  m_Name: Enter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8570027064444608541
+--- !u!4 &446213721386752413
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872386533007897959}
+  m_GameObject: {fileID: 3491963223783141594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100, y: 0, z: -100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 6618060724658998238}
-  m_Father: {fileID: 1812310208359250056}
-  m_RootOrder: 3
+  m_Children: []
+  m_Father: {fileID: 7705990919103556418}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4113390673239885646
+--- !u!135 &7661740825802867103
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872386533007897959}
+  m_GameObject: {fileID: 3491963223783141594}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 180
+  m_Radius: 150
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &928035720520349339
+--- !u!114 &8575938510372950191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872386533007897959}
+  m_GameObject: {fileID: 3491963223783141594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 1099570766478248152}
+  clusterGroupIndex: 0
+--- !u!1 &3871546212726065698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4141921289505853768}
+  - component: {fileID: 3041577099582529535}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4141921289505853768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871546212726065698}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7705990919103556418}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3041577099582529535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871546212726065698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerType: 0
+  spawnCount: 0
+  spawnData:
+  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
+    spawnChance: 25
+  npcCountMax: 15
+  curNPCs: []
+  spawnerGizmoMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
+  areaRadius: 60
+  areaHeight: 100
+  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  usePosition: 0
+--- !u!1 &4083324497409265107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7705990919103556418}
+  - component: {fileID: 4667710930862179266}
+  - component: {fileID: 1099570766478248152}
+  m_Layer: 0
+  m_Name: Cluster_01 (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7705990919103556418
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083324497409265107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -100, y: 0, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4141921289505853768}
+  - {fileID: 446213721386752413}
+  - {fileID: 2113931117214613515}
+  m_Father: {fileID: 1812310208359250056}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4667710930862179266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083324497409265107}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spawner_maximum: 17
---- !u!114 &3486978606276475364
+--- !u!114 &1099570766478248152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872386533007897959}
+  m_GameObject: {fileID: 4083324497409265107}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clusterGroups:
-  - clusterGroupName: New Cluster Group
+  - clusterGroupName: Enter
     show: 1
     showEntries: 1
     showOverrides: 0
@@ -342,7 +605,7 @@ MonoBehaviour:
         enterEvents:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 928035720520349339}
+            - m_Target: {fileID: 4667710930862179266}
               m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
               m_MethodName: Enable_Spawner
               m_Mode: 1
@@ -356,8 +619,47 @@ MonoBehaviour:
               m_CallState: 2
         exitEvents:
           m_PersistentCalls:
+            m_Calls: []
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+  - clusterGroupName: Exit
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls: []
+        exitEvents:
+          m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 928035720520349339}
+            - m_Target: {fileID: 4667710930862179266}
               m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
               m_MethodName: Dissable_Spawner
               m_Mode: 1
@@ -377,21 +679,7 @@ MonoBehaviour:
       show: 1
       layerAppliedOnChild: 0
     overrides: []
---- !u!114 &5388510922967087119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4872386533007897959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cluster: {fileID: 3486978606276475364}
-  clusterGroupIndex: 0
---- !u!1 &7134371032674064847
+--- !u!1 &4268373734482066378
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,11 +687,68 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7212154790100701167}
-  - component: {fileID: 1865278812415589984}
-  - component: {fileID: 3212213751918595049}
-  - component: {fileID: 7367696239293974248}
-  - component: {fileID: 2925745481462805562}
+  - component: {fileID: 2113931117214613515}
+  - component: {fileID: 8081573674205660885}
+  - component: {fileID: 7016205074720959983}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2113931117214613515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268373734482066378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7705990919103556418}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &8081573674205660885
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268373734482066378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7016205074720959983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4268373734482066378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 1099570766478248152}
+  clusterGroupIndex: 1
+--- !u!1 &4810192235964252473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8087392875641113925}
+  - component: {fileID: 9004336128467809966}
+  - component: {fileID: 7395037408746061283}
   m_Layer: 0
   m_Name: Cluster_01 (2)
   m_TagString: Untagged
@@ -411,61 +756,50 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7212154790100701167
+--- !u!4 &8087392875641113925
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7134371032674064847}
+  m_GameObject: {fileID: 4810192235964252473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 100, y: 0, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1548469169133033648}
+  - {fileID: 2939064545338122494}
+  - {fileID: 6943051058217112021}
+  - {fileID: 5921876091420887612}
   m_Father: {fileID: 1812310208359250056}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1865278812415589984
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7134371032674064847}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 180
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3212213751918595049
+--- !u!114 &9004336128467809966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7134371032674064847}
+  m_GameObject: {fileID: 4810192235964252473}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _spawner_maximum: 17
---- !u!114 &7367696239293974248
+--- !u!114 &7395037408746061283
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7134371032674064847}
+  m_GameObject: {fileID: 4810192235964252473}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   clusterGroups:
-  - clusterGroupName: New Cluster Group
+  - clusterGroupName: Enter
     show: 1
     showEntries: 1
     showOverrides: 0
@@ -493,7 +827,7 @@ MonoBehaviour:
         enterEvents:
           m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 3212213751918595049}
+            - m_Target: {fileID: 9004336128467809966}
               m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
               m_MethodName: Enable_Spawner
               m_Mode: 1
@@ -507,8 +841,47 @@ MonoBehaviour:
               m_CallState: 2
         exitEvents:
           m_PersistentCalls:
+            m_Calls: []
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+  - clusterGroupName: Exit
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls: []
+        exitEvents:
+          m_PersistentCalls:
             m_Calls:
-            - m_Target: {fileID: 3212213751918595049}
+            - m_Target: {fileID: 9004336128467809966}
               m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
               m_MethodName: Dissable_Spawner
               m_Mode: 1
@@ -528,20 +901,188 @@ MonoBehaviour:
       show: 1
       layerAppliedOnChild: 0
     overrides: []
---- !u!114 &2925745481462805562
+--- !u!1 &6097415000836938205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8648824652748420797}
+  - component: {fileID: 1835441897674765997}
+  - component: {fileID: 2516597789723253413}
+  m_Layer: 0
+  m_Name: Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8648824652748420797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6097415000836938205}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4948463327956059774}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1835441897674765997
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6097415000836938205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 180
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2516597789723253413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7134371032674064847}
+  m_GameObject: {fileID: 6097415000836938205}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cluster: {fileID: 7367696239293974248}
+  cluster: {fileID: 4566414659891918291}
+  clusterGroupIndex: 1
+--- !u!1 &6670885673580720465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6943051058217112021}
+  - component: {fileID: 1136584832990479026}
+  - component: {fileID: 1040369342688803461}
+  m_Layer: 0
+  m_Name: Enter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6943051058217112021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670885673580720465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8087392875641113925}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1136584832990479026
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670885673580720465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 150
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1040369342688803461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6670885673580720465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cluster: {fileID: 7395037408746061283}
   clusterGroupIndex: 0
+--- !u!1 &7714432063639015327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2939064545338122494}
+  - component: {fileID: 5050565882431070979}
+  m_Layer: 0
+  m_Name: Spawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2939064545338122494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714432063639015327}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8087392875641113925}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5050565882431070979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7714432063639015327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ec49ea537de7e448b93e909daa1bbb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerType: 0
+  spawnCount: 0
+  spawnData:
+  - npc: {fileID: 11400000, guid: 6771c268b5fa92a4dab2f87298df9679, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: dc37483fbdfd90047802cd97fd687ff0, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: 5640c6828dab00c40b58815a520f1cdb, type: 2}
+    spawnChance: 25
+  - npc: {fileID: 11400000, guid: b6c69057cb45cb9429bccf7b93df0f47, type: 2}
+    spawnChance: 25
+  npcCountMax: 15
+  curNPCs: []
+  spawnerGizmoMesh: {fileID: -6905989794442383065, guid: e7cdb06a656c8f14a85b41ee21cd7a80, type: 3}
+  areaRadius: 60
+  areaHeight: 100
+  gizmoColor: {r: 1, g: 0.43286735, b: 0.015686274, a: 0.27450982}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  usePosition: 0
 --- !u!1 &7732536764137960442
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,10 +1092,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1915187846540234914}
-  - component: {fileID: 1701080507425970719}
   - component: {fileID: 5273905135003045187}
   - component: {fileID: 7655509082334546953}
-  - component: {fileID: 8054980611712655263}
   m_Layer: 0
   m_Name: Cluster_01
   m_TagString: Untagged
@@ -574,22 +1113,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8063120772383025563}
+  - {fileID: 4083238611458068430}
+  - {fileID: 2841536143090646308}
   m_Father: {fileID: 1812310208359250056}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1701080507425970719
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7732536764137960442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 180
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5273905135003045187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,7 +1144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clusterGroups:
-  - clusterGroupName: New Cluster Group
+  - clusterGroupName: Enter
     show: 1
     showEntries: 1
     showOverrides: 0
@@ -658,6 +1186,45 @@ MonoBehaviour:
               m_CallState: 2
         exitEvents:
           m_PersistentCalls:
+            m_Calls: []
+      hideRendererNotDisable: 0
+      lightTransition: 0
+      lightTransitionTime: 0
+      enableLightIntensityAmount: 1
+      disableLightIntensityAmount: 0
+      show: 1
+      layerAppliedOnChild: 0
+    overrides: []
+  - clusterGroupName: Exit
+    show: 1
+    showEntries: 1
+    showOverrides: 0
+    showGizmos: 0
+    Entries:
+    - Type: 7
+      GameObjectList: []
+      LightList: []
+      RendererList: []
+      ParticleSystemList: []
+      action:
+        ActionEventType1: 0
+        ActionEventType2: 1
+        enterActionType: 0
+        exitActionType: 1
+        enterDelay: 0
+        exitDelay: 0
+        enterMaterial: {fileID: 0}
+        exitMaterial: {fileID: 0}
+        enterTag: 
+        exitTag: 
+        enterLayer: 0
+        exitLayer: 0
+        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
+        enterEvents:
+          m_PersistentCalls:
+            m_Calls: []
+        exitEvents:
+          m_PersistentCalls:
             m_Calls:
             - m_Target: {fileID: 5273905135003045187}
               m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
@@ -679,13 +1246,58 @@ MonoBehaviour:
       show: 1
       layerAppliedOnChild: 0
     overrides: []
---- !u!114 &8054980611712655263
+--- !u!1 &7825341055485330487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4083238611458068430}
+  - component: {fileID: 4338063981940164600}
+  - component: {fileID: 5488891340037383075}
+  m_Layer: 0
+  m_Name: Enter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4083238611458068430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825341055485330487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1915187846540234914}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4338063981940164600
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825341055485330487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 150
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5488891340037383075
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7732536764137960442}
+  m_GameObject: {fileID: 7825341055485330487}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
@@ -757,7 +1369,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   usePosition: 0
---- !u!1 &8590134230876529341
+--- !u!1 &8824273559106489347
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -765,146 +1377,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5865942169447051515}
-  - component: {fileID: 4026092637552023008}
-  - component: {fileID: 2880459753084807438}
-  - component: {fileID: 2276216131494714629}
-  - component: {fileID: 1280023114614120594}
+  - component: {fileID: 8063812339317961477}
+  - component: {fileID: 1024995497114897449}
+  - component: {fileID: 8788942550585717198}
   m_Layer: 0
-  m_Name: Cluster_01 (1)
+  m_Name: Enter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5865942169447051515
+--- !u!4 &8063812339317961477
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590134230876529341}
+  m_GameObject: {fileID: 8824273559106489347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -100, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 9003451248299002249}
-  m_Father: {fileID: 1812310208359250056}
+  m_Children: []
+  m_Father: {fileID: 4948463327956059774}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &4026092637552023008
+--- !u!135 &1024995497114897449
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590134230876529341}
+  m_GameObject: {fileID: 8824273559106489347}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 180
+  m_Radius: 150
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2880459753084807438
+--- !u!114 &8788942550585717198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590134230876529341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d025e3ce55ac6e4a9ff5e297674f60c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _spawner_maximum: 17
---- !u!114 &2276216131494714629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590134230876529341}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 586a286294e1d664c931a4f8510c64cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clusterGroups:
-  - clusterGroupName: New Cluster Group
-    show: 1
-    showEntries: 1
-    showOverrides: 0
-    showGizmos: 0
-    Entries:
-    - Type: 7
-      GameObjectList: []
-      LightList: []
-      RendererList: []
-      ParticleSystemList: []
-      action:
-        ActionEventType1: 0
-        ActionEventType2: 1
-        enterActionType: 0
-        exitActionType: 1
-        enterDelay: 0
-        exitDelay: 0
-        enterMaterial: {fileID: 0}
-        exitMaterial: {fileID: 0}
-        enterTag: 
-        exitTag: 
-        enterLayer: 0
-        exitLayer: 0
-        conditions: {fileID: 11400000, guid: 09554811018042a42b18b88fa93281ec, type: 2}
-        enterEvents:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 2880459753084807438}
-              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
-              m_MethodName: Enable_Spawner
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-        exitEvents:
-          m_PersistentCalls:
-            m_Calls:
-            - m_Target: {fileID: 2880459753084807438}
-              m_TargetAssemblyTypeName: DinoRage.Spawner_Over_Ride_Test, Assembly-CSharp
-              m_MethodName: Dissable_Spawner
-              m_Mode: 1
-              m_Arguments:
-                m_ObjectArgument: {fileID: 0}
-                m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-                m_IntArgument: 0
-                m_FloatArgument: 0
-                m_StringArgument: 
-                m_BoolArgument: 0
-              m_CallState: 2
-      hideRendererNotDisable: 0
-      lightTransition: 0
-      lightTransitionTime: 0
-      enableLightIntensityAmount: 1
-      disableLightIntensityAmount: 0
-      show: 1
-      layerAppliedOnChild: 0
-    overrides: []
---- !u!114 &1280023114614120594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8590134230876529341}
+  m_GameObject: {fileID: 8824273559106489347}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f3b44f1c43ad064b85426976f80603a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cluster: {fileID: 2276216131494714629}
+  cluster: {fileID: 4566414659891918291}
   clusterGroupIndex: 0
